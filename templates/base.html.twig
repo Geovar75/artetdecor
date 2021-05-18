@@ -1,19 +1,258 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
-
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="Geoffroy VARLEZ">
+		<meta name="generator" content="Jekyll v4.1.1">
+		<title>
+			{% block title %}{% endblock %}
+		</title>
+		<link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+		<link href="{{ asset('assets/css/carousel.css') }}" rel="stylesheet">
+		<link href="{{ asset('assets/css/all.min.css') }}" rel="stylesheet">
+		<link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+    {% block javascript %}{% endblock %}
+	</head>
+	<body>
+		<header>
+			<nav class="navbar">
+				<div class="logo">
+					<a href="{{ path('home') }}"><img src="{{ asset('assets/pictures/logo.png') }}" alt="logo Art et Décor"/></a>
+				</div>
+				<div class="mainMenu">
+					<ul>
+						<li>
+							<a href="{{ path('home') }}" class="button active">Accueil</a>
+						</li>
+						<li>
+							<a href="{{ path('products') }}" class="button">Produits</a>
+						</li>
+						<li>
+							<a href="#" class="button">Blog</a>
+						</li>
+						<li>
+							<a href="#" class="button">Histoire</a>
+						</li>
+						<li>
+							<a href="#" class="button">L'équipe</a>
+						</li>
+						<li>
+							<a href="#" class="button">Photos</a>
+						</li>
+						<li>
+							<a href="#" class="button">Contact</a>
+						</li>
+						<li>
+							<a href="#" class="location">
+								<i class="fas fa-map-marker-alt"></i>
+							</a>
+						</li>
+						<li>
+							<a href="{{ path('cart') }}" class="cart">
+								<i class="fas fa-shopping-cart"></i>
+							</a>
+						</li>
+						<div class="nav-btn">
+							{% if app.user %}
+              <li>
+								<a href="{{ path('account') }}" class="account">
+									<i class="fas fa-user-circle"></i>
+								</a>
+              </li>
+							{% else %}
+              <li>
+								<a href="{{ path('app_login') }}" class="account">
+									<i class="fas fa-user-circle"></i>
+								</a>
+              </li>
+							{% endif %}
+						</div>
+              <div class="search">
+                <li>
+                  <form class="search-container">
+                    <input type="text" class="search-bar" placeholder="Rechercher">
+                    <a href="#"><i id="search-icon" class="fa fa-search"></i></a>
+                  </form>
+                </li>
+              </div>
+          </ul>
+			  </div>
+			<!-- <div class="burgerMenu">
+			            <div class="burger-btn">
+			                <i class="icon fas fa-bars"></i>
+			            </div>
+			            <div class="dropdown-menu">
+			                <ul>
+			                    <li><a href="index.html">Home</a></li>
+			                    <li><a href="solutions.html">Solutions</a></li>
+			                    <li><a href="product.html">Product</a></li>
+			                    <li><a href="blog.html">Blog</a></li>
+			                    <li><a href="team.html">Team</a></li>
+			                </ul>
+			            </div>
+			        </div> -->
+		</nav>
+</header>
+<main>
+  {% block content %}{% endblock %}
+</main>
+<footer class="footer-section">
+  <div class="container">
+    <div class="footer-cta pt-5 pb-5">
+      <div class="row">
+        <div class="agencies">
+          <h1>Agence Golfe Juan  :</h1>
+          <h1>Agence Montauroux  :</h1>
+        </div>
+        <div class="col-xl-4 col-md-4 mb-30">
+            <div class="cta-text">
+              <i class="fas fa-map-marker-alt" style="color:white; font-size:18px; margin-right:10px;"></i><span style="color:white; font-size:20px;">Vos magasins :</span><br>
+              <p style="margin-top:15px;">13 avenue Clément Massier</p>
+              <p>06220 Vallauris (Golfe Juan)</p>
+              <hr>
+              <p>Centre Commercial Centre Espace 1, RD 562</p>
+              <p>83440 Montauroux</p>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-4 mb-30">
+            <div class="cta-text">
+              <i class="fas fa-phone" style="color:white; font-size:18px; margin-right:10px;"></i><span style="color:white; font-size:20px;">Contactez-nous :</span><br>
+              <p style="margin:15px auto 40px auto; padding-left:35px;">04-93-63-72-37</p>
+              <hr>
+              <p style="padding-left:35px">04-94-50-81-16</p>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-4 mb-30">
+          <div class="cta-text">
+            <i class="far fa-envelope-open" style="color:white; font-size:18px; margin-right:10px;"></i><span style="color:white; font-size:20px;">Email :</span><br>
+            <p style="margin:15px auto 40px auto; padding-left:10px;">artetdecormb@orange.fr</p>
+            <hr>
+            <p style="padding-left:10px;">artetdecormh@orange.fr</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-content pt-5 pb-5">
+      <div class="row">
+        <div class="col-xl-4 col-lg-4 mb-50">
+          <div class="footer-widget">
+            <div class="footer-logo">
+              <a href="{{ path('home') }}"><img src="{{ asset('assets/pictures/logo.png') }}" alt="logo Art et Décor"/></a>
+            </div>
+            <div class="footer-text">
+              <p style="padding-left:28px;">
+                Peintures et Revêtements
+              </p>
+            </div>
+            <div class="footer-widget-heading">
+              <h2>Horaires d'ouverture :</h2>
+              <table>
+                <tr>
+                  <td>Lundi :</td>
+                  <td>7h30 - 12h00 / 13h30-18h00</td>
+                </tr>
+                <tr>
+                  <td>Mardi :</td>
+                  <td>7h30 - 12h00 / 13h30-18h00</td>
+                </tr>
+                <tr>
+                  <td>Mercredi :</td>
+                  <td>7h30 - 12h00 / 13h30-18h00</td>
+                </tr>
+                <tr>
+                  <td>Jeudi :</td>
+                  <td>7h30 - 12h00 / 13h30-18h00</td>
+                </tr>
+                <tr>
+                  <td>Vendredi :</td>
+                  <td>7h30 - 12h00 / 13h30-18h00</td>
+                </tr>
+                <tr>
+                  <td>Samedi :</td>
+                  <td>Fermé</td>
+                </tr>
+                <tr>
+                  <td>Dimanche :</td>
+                  <td>Fermé</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+          <div class="footer-widget">
+            <div class="footer-widget-heading">
+              <h3>Liens utiles</h3>
+            </div>
+            <ul>
+              <li><a href="#">Accueil</a></li>
+              <li><a href="#">Produits</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Histoire</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">L'équipe</a></li>
+              <li><a href="#">Photos</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+          <div class="footer-widget">
+            <div class="footer-widget-heading">
+              <h3>Inscrivez-vous !</h3>
+            </div>
+            <div class="footer-text mb-25">
+              <p>Ne manquez pas nos dernières nouveautés ou promotions !</p>
+            </div>
+            <div class="subscribe-form">
+              <form action="#">
+                <input type="text" placeholder="Adresse e-mail">
+                <button>
+                  <i class="fab fa-telegram-plane"></i>
+                </button>
+              </form>
+            </div>
+            <div class="footer-social-icon">
+               <div class="footer-widget-heading">
+                <h3>Réseaux sociaux</h3>
+              </div>
+              <a href="#">
+                <i class="fab fa-facebook-f fa-2x"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter fa-2x"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-google-plus-g fa-2x"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram fa-2x"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright-area">
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 text-center">
+          <div class="copyright-text">
+            <p>Copyright &copy; 2021, Tous droits résérvés</p>
+            <p>- Conditions Générales de vente</p>
+            <p>- Mentions légales</p>
+            <p>Politique de confidentialité</p>
+          </div>
+        </div>
+      </div>
+  </div>
+</footer>
+<script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.slim.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script>
+<script src="{{ asset('assets/js/all.min.js') }}"></script>
+</body>
+{% block script %}{% endblock %}
 </html>

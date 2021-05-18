@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block javascript %} <script src="https://js.stripe.com/v3/"></script> {% endblock %}
+
+{% block title %}Art et Décor | Paiement de ma commande{% endblock %}
+
+{% block content %}
+    <h1 style="margin-top:150px;">Votre récapitulatif</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <p>Récap de ma commande</p>
+            {% for key,product in cart %}
+            {# Cibler la deuxième div #}
+                <div class="row {% if key > 0 %}mt-4{% endif %}">
+                    <div class="col-2">
+                        <img src="/assets/pictures/{{ product.product.image }}" alt="{{ product.product.name }}" class="img-fluid" style="max-height:100px; max-width:100px;"/>
+                    </div>
+                    <div class="col-8 my-auto">
+                        {{ product.product.name }}
+                        <small>{{ product.product.subtitles }}</small>
+                        <br>
+                        x{{ product.quantity }}
+                    </div>
+                    <div class="col-2 my-auto">
+                        {{ ((product.product.price * product.quantity) / 100)|number_format(2, ',', '.') }} €
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <strong>Sous Total : {{ (total / 100)|number_format(2, ',', '.') }} €</strong>
+        <strong>Livraison : {{ (carrier.price / 100)|number_format(2, ',', '.') }} €</strong>
+        <strong>Total : {{ ((total / 100) + (carrier.price / 100))|number_format(2, ',', '.') }} €</strong>
+        <a class="btn btn-success btn-block mt-3" id="checkout-button">Payer {{ ((total / 100) + (carrier.price / 100))|number_format(2, ',', '.') }} €</a>
+    </div>
+{% endblock %}
+{% block script %}
+    <script type="text/javascript">
+    // Create an instance of the Stripe object with your publishable API key
+    var stripe = Stripe("pk_test_51Io2foBOHa9OUMPzhas42cGHBr21ruSbWK4bKGX11l5fX88topLgVJudgaHtb2RRZguGgauVIymnAyKU5R8IKin200nzf6cSJ9");
+    var checkoutButton = document.getElementById("checkout-button");
+    checkoutButton.addEventListener("click", function () {
+      fetch("/commande/create-session/{{ reference }}", {
+        method: "POST",
+      })
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (session) {
+          if(session.error == 'order'){
+            window.location.replace('{{ path('order') }}')
+          }else{
+            return stripe.redirectToCheckout({ sessionId: session.id });
+          }
+        })
+        .then(function (result) {
+          // If redirectToCheckout fails due to a browser or network
+          // error, you should display the localized error message to your
+          // customer using error.message.
+          if (result.error) {
+            alert(result.error.message);
+          }
+        })
+        .catch(function (error) {
+          console.error("Error:", error);
+        });
+    });
+  </script>
+{% endblock %}
