@@ -42,29 +42,33 @@
 							<a href="#" class="button">Photos</a>
 						</li>
 						<li>
-							<a href="#" class="button">Contact</a>
+							<a href="{{ path('contact') }}" class="button">Contact</a>
 						</li>
 						<li>
 							<a href="#" class="location">
-								<i class="fas fa-map-marker-alt"></i>
+								{# <i class="fas fa-map-marker-alt"></i> #}
+                <img src="{{ asset('assets/pictures/localisation.png') }}" alt="Localisation" style="width:25px;height:25px;vertical-align:center"/>
 							</a>
 						</li>
 						<li>
 							<a href="{{ path('cart') }}" class="cart">
-								<i class="fas fa-shopping-cart"></i>
+								{# <i class="fas fa-shopping-cart"></i> #}
+                <img src="{{ asset('assets/pictures/caddie.png') }}" alt="Caddie" style="width:25px;height:25px;vertical-align:center"/>
 							</a>
 						</li>
 						<div class="nav-btn">
 							{% if app.user %}
               <li>
 								<a href="{{ path('account') }}" class="account">
-									<i class="fas fa-user-circle"></i>
+									{# <i class="fas fa-user-circle"></i> #}
+                  <img src="{{ asset('assets/pictures/user.png') }}" alt="User" style="width:25px;height:25px;vertical-align:center"/>
 								</a>
               </li>
 							{% else %}
               <li>
 								<a href="{{ path('app_login') }}" class="account">
-									<i class="fas fa-user-circle"></i>
+									{# <i class="fas fa-user-circle"></i> #}
+                  <img src="{{ asset('assets/pictures/user.png') }}" alt="User" style="width:25px;height:25px;vertical-align:center"/>
 								</a>
               </li>
 							{% endif %}
@@ -253,6 +257,7 @@
 <script src="{{ asset('assets/js/jquery.slim.min.js') }}"></script>
 <script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script>
 <script src="{{ asset('assets/js/all.min.js') }}"></script>
+<script src="{{ asset('assets/js/scripts.js') }}"></script>
 </body>
 {% block script %}{% endblock %}
 </html>

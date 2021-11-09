@@ -70,6 +70,10 @@ body, html {
   color: black;
 }
 
+.mainMenu a:hover{
+  text-decoration: underline;
+}
+
 .logo {
   margin-left: 15px;
 }
@@ -81,8 +85,8 @@ body, html {
 }
 
 .navbar img {
-  width: 130px;
-  height: 50px;
+  width: 100%;
+  height: 70px;
 }
 
 
@@ -110,7 +114,7 @@ body, html {
 .carousel-caption span{
  display: inline-block;
  max-width: 75%;
- background: rgba(255,255,255,0.6);
+ background: rgba(255,255,255,0.7);
  color: black;
 }
 
@@ -157,35 +161,88 @@ body, html {
 /* END CAROUSEL */
 
 /* HOME PAGE */
-.categories{
-  padding: 50px 150px 150px 150px;
-}
-
-.categories .row{
+.places{
   display: flex;
   justify-content: center;
 }
 
-.categories .row img{
+.categories .places .first img{
   margin: 5px;
   filter: gray; /* IE5+ */
   -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
   -webkit-transition: all 0.4s ease-in-out;
 }
 
-.categories .row img:hover{
+.categories .places .first img:hover{
   filter: none;
   -webkit-filter: grayscale(0);
   -webkit-transform: scale(1.01);
 }
 
-.categories .row{
-  margin: 0;
-}
-
 .categories h1{
   text-align: center;
   margin-bottom: 35px;
+}
+
+.places img{
+  width: 200px;
+  height: 180px;
+}
+
+.flex, .flex2, .flex3, .flex4, .flex5, .flex6, .flex7, .flex8{
+  display: flex;
+  text-align: center;
+}
+
+.flex p, .flex2 p, .flex3 p, .flex4 p, .flex5 p, .flex6 p, .flex7 p, .flex8 p{
+  text-align: center;
+  margin-top: 80px;
+}
+
+.paint img, .paint2 img, .paint3 img, .paint4 img, .paint5 img, .paint6 img, .paint7 img, .paint8 img{
+  width: 380px;
+  height: 350px;
+}
+
+.first{
+  max-width: 900px;
+  position:relative;
+}
+
+.first img{
+  cursor: pointer;
+}
+
+.salle-a-manger{
+  display: block;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: red;
+}
+
+.first:hover .overlay {
+  opacity: 0.50;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
 .presentation{
@@ -230,6 +287,17 @@ body, html {
 .info img{
   display: block;
   margin: 0 auto;
+}
+
+.info2{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.qualite img{
+  width: 120px;
+  height: 100px;
 }
 
 /* PARTNERS SLIDER */

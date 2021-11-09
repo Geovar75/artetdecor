@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Classes\Cart;
 use App\Entity\Order;
 use App\Form\OrderType;
+use App\Classes\MailJet;
 use App\Entity\OrderDetails;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -77,7 +78,7 @@ class OrderController extends AbstractController
             $order->setCarrierName($carriers->getName());
             $order->setCarrierPrice($carriers->getPrice());
             $order->setDelivery($delivery_content);
-            $order->setIsPaid(0);
+            $order->setState(0);
 
             $this->entityManager->persist($order);
 
@@ -117,11 +118,16 @@ class OrderController extends AbstractController
             return $this->redirectToRoute('home');
         }
 
-        if(!$order->getIsPaid()){
+        if($order->getState() == 0){
 
             $cart->remove();
-            $order->setIsPaid(1);
+            $order->setState(1);
             $this->entityManager->flush();
+
+            $mail = new MailJet();
+            $content = "Bonjour ".$order->getUser()->getFirstname()."<br/>Merci pour votre commande<br/>";
+            $mail->send($order->getUser()->getEmail(), $order->getUser()->getFirstname(), 'Commande validée sur Art et Décor', $content);
+
         }
 
         return $this->render('order/valid.html.twig', [

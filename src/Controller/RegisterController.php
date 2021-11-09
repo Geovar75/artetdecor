@@ -3,12 +3,13 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Classes\MailJet;
 use App\Form\RegisterType;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\Request;
-use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class RegisterController extends AbstractController
@@ -25,6 +26,9 @@ class RegisterController extends AbstractController
      */
     public function index(Request $request, UserPasswordEncoderInterface $encoder): Response
     {
+
+        $notification = null;
+
         $user = new User();
         $form = $this->createForm(RegisterType::class, $user);
 
@@ -32,17 +36,31 @@ class RegisterController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid()){
 
-            $user=$form->getData();
+            $user = $form->getData();
 
-            $password = $encoder->encodePassword($user, $user->getPassword());
-            $user->setPassword($password);
+            $search_email = $this->entityManager->getRepository(User::class)->findOneByEmail($user->getEmail());
 
-            $this->entityManager->persist($user);
-            $this->entityManager->flush();
+            if(!$search_email){
+
+                $password = $encoder->encodePassword($user, $user->getPassword());
+                $user->setPassword($password);
+    
+                $this->entityManager->persist($user);
+                $this->entityManager->flush();
+
+                $mail = new MailJet();
+                $content = "Bonjour ".$user->getFirstname()."<br/>Bienvenue sur votre boutique Art et Décor<br/>";
+                $mail->send($user->getEmail(), $user->getFirstname(), 'Bienvenue sur Art et Décor', $content);
+
+                $notification = 'Merci d\'avoir créé votre compte sur www.art-et-decor.com. Nous sommes heureux de vous accueillir parmi nos clients.';
+            }else{
+
+                $notification = 'L\'email que vous avez renseigné existe déjà';
+            }
         }
-
         return $this->render('register/register.html.twig', [
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'notification' => $notification
         ]);
     }
 }
