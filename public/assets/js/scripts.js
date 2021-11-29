@@ -6,6 +6,7 @@ $(document).ready(function(){
     $('.paint6').hide();
     $('.paint7').hide();
     $('.paint8').hide();
+    $('.paint9').hide();
 
     $(".salle-a-manger").click(function(){
         $('.paint2').hide();
@@ -26,6 +27,7 @@ $(document).ready(function(){
             $('.paint6').hide();
             $('.paint7').hide();
             $('.paint8').hide();
+            $('.paint9').hide();
             $('.paint2').show();
     });
     $(".bureau").click(function(){
@@ -36,6 +38,7 @@ $(document).ready(function(){
         $('.paint6').hide();
         $('.paint7').hide();
         $('.paint8').hide();
+        $('.paint9').hide();
         $('.paint3').show();
     });
     $(".boiseries").click(function(){
@@ -46,6 +49,7 @@ $(document).ready(function(){
         $('.paint6').hide();
         $('.paint7').hide();
         $('.paint8').hide();
+        $('.paint9').hide();
         $('.paint4').show();
     });
     $(".boiseries").click(function(){
@@ -56,6 +60,7 @@ $(document).ready(function(){
         $('.paint6').hide();
         $('.paint7').hide();
         $('.paint8').hide();
+        $('.paint9').hide();
         $('.paint4').show();
     });
     $(".salle-de-bain").click(function(){
@@ -66,6 +71,7 @@ $(document).ready(function(){
         $('.paint6').hide();
         $('.paint7').hide();
         $('.paint8').hide();
+        $('.paint9').hide();
         $('.paint5').show();
     });
     $(".boiseries").click(function(){
@@ -76,6 +82,7 @@ $(document).ready(function(){
         $('.paint6').hide();
         $('.paint7').hide();
         $('.paint8').hide();
+        $('.paint9').hide();
         $('.paint4').show();
     });
     $(".salle-de-bain").click(function(){
@@ -86,6 +93,7 @@ $(document).ready(function(){
         $('.paint6').hide();
         $('.paint7').hide();
         $('.paint8').hide();
+        $('.paint9').hide();
         $('.paint5').show();
     });
     $(".facade").click(function(){
@@ -96,6 +104,7 @@ $(document).ready(function(){
         $('.paint5').hide();
         $('.paint7').hide();
         $('.paint8').hide();
+        $('.paint9').hide();
         $('.paint6').show();
     });
     $(".chambre").click(function(){
@@ -106,6 +115,7 @@ $(document).ready(function(){
         $('.paint5').hide();
         $('.paint6').hide();
         $('.paint8').hide();
+        $('.paint9').hide();
         $('.paint7').show();
     });
     $(".cuisine").click(function(){
@@ -116,6 +126,18 @@ $(document).ready(function(){
         $('.paint5').hide();
         $('.paint6').hide();
         $('.paint7').hide();
+        $('.paint9').hide();
         $('.paint8').show();
+    });
+    $(".fer").click(function(){
+        $('.paint').hide();
+        $('.paint2').hide();
+        $('.paint3').hide();
+        $('.paint4').hide();
+        $('.paint5').hide();
+        $('.paint6').hide();
+        $('.paint7').hide();
+        $('.paint8').hide();
+        $('.paint9').show();
     });
 });
