@@ -115,6 +115,19 @@
                     </div>
                 </div>
             </div>
+            <div class="carousel-item">
+                <img src="{{ asset('assets/pictures/rouleau.png') }}" alt="Rouleau"/>
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>
+                            <span>
+                                <strong><p>Solutions efficaces</p></strong><br>
+                                <strong><p>Peintures - Revêtements - Outillage</p>
+                            </span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -284,6 +297,16 @@
             </div>
     </section>
     <section>
+        {# <div class="counters">
+            <h1>Art et Décor en Chiffre</h1>
+            <span>Plus de </span><span class="counter">50</span><span> ANNÉES DANS LE SECTEUR</span>
+            <span>Plus de </span><span class="counter">1300</span><span> TEINTES</span>
+            <span>Plus de </span><span class="counter">5000</span>
+            <span>Plus d' </span><span class="counter">1.000.000</span><span> € DE CHIFFRES D'AFFAIRES</span>
+        </div> #}
+<span class='numscroller' data-min='1' data-max='1000' data-delay='10' data-increment='1'>1000</span>
+    </section>
+    <section>
         <div class="info">
             <div class="contact">
                 <img src="{{ asset('assets/pictures/Contact.gif') }}" alt="Contact"/><br>
@@ -399,7 +422,7 @@
             </div>
         </div>
     </section>
-    <section class="partners">
+    {# <section class="partners">
         <div class="logo-slider">
             <h1>Nos partenaires</h1>
             <div class="logo-slide-track">
@@ -470,6 +493,6 @@
                 <div class="slide"></div>
             </div>
         </div>
-    </section>
+    </section> #}
 
 {% endblock %}

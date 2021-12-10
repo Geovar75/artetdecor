@@ -18,6 +18,28 @@ body, html {
   overflow-x: hidden;
 }
 
+.bg {
+  background-color: #1e1f26;
+  height: 100vh;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.level {
+  background-color: #00d1b2;
+  padding: 5rem 0;
+  color: #ffffff;
+  margin: 0 !important;
+}
+
+.title {
+  color: inherit;
+  width: 200px;
+  height: 36px;
+}
+
 /* BOOTSTRAP */
 .bd-placeholder-img {
   font-size: 1.125rem;

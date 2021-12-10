@@ -16,6 +16,7 @@ $(document).ready(function(){
         $('.paint6').hide();
         $('.paint7').hide();
         $('.paint8').hide();
+        $('.paint9').hide();
         $('.paint').show();
     });
 
@@ -140,4 +141,11 @@ $(document).ready(function(){
         $('.paint8').hide();
         $('.paint9').show();
     });
+
+    $('.counter').countUp({
+        'time': 5000,
+        'delay': 20
+      });
+
+
 });
