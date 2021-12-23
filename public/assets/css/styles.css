@@ -183,6 +183,66 @@ body, html {
 /* END CAROUSEL */
 
 /* HOME PAGE */
+.weave {
+  width: 150px;
+  height: 150px;
+  border: 4px solid #2d71b6;
+  border-radius: 36px;
+  position: relative;
+  color: #2d71b6;
+  text-align: center;
+  padding: 25px;
+}
+.weave:before, .weave:after {
+  width: 150px;
+  height: 150px;
+  border: 4px solid #2d71b6;
+  border-radius: 36px;
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+}
+.weave:before {
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+.weave:after {
+  -moz-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.chiffres h1{
+  color: #0b104f;
+  position: absolute;
+  margin-bottom: 300px;
+  display: block;
+}
+
+.chiffres{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 150px;
+}
+
+.chiffre{
+  position: relative;
+  margin: 50px 0 500px 0;
+}
+
+.chiffre video{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  position: absolute;
+  filter:opacity(30%);
+}
+
 .salle-a-manger, .salon, .bureau, .boiseries, .salle-de-bain, .facade, .chambre, .cuisine, .fer{
   position:relative;
   display:inline-block;
@@ -203,6 +263,14 @@ body, html {
   margin: auto;
   color: white;
   cursor: pointer;
+}
+
+.paint, .paint2, .paint3, .paint4, .paint5, .paint6, .paint7, .paint8, .paint9{
+  margin: 200px 50px 0 0;
+}
+
+.places h2{
+  text-align: center;
 }
 
 .salle-a-manger:hover .inside, .salon:hover .inside, .bureau:hover .inside, .boiseries:hover .inside, .salle-de-bain:hover .inside, .facade:hover .inside, .chambre:hover .inside, .cuisine:hover .inside, .fer:hover .inside {
@@ -279,33 +347,35 @@ body, html {
   -ms-transform: translate(-50%, -50%);
 }
 
-.presentation{
-  background: #2d5475;
+.parallax{
+    background: url('../pictures/parallax.jpg') fixed no-repeat;
+    background-size: cover;
+}
+
+.parallax .row{
+  margin-left: 45%;
+  margin-right: 100px;
+  text-align: center;
+  align-items: center;
 }
 
 .presentation img{
-  width: 100px;
-  height: 100px;
-  background : #2d5475;
+  width: 80px;
+  height: 80px;
 }
 
 .presentation h2, .presentation p{
   color: white;
 }
 
-.presentation h2::before{
-  content: "";
-  position: relative;
-  left: 0;
-  bottom: -5px;
-  height: 4px;
-  width: 50px;
-  background: #ff5e14;
-}
-
 .presentation h1{
+  max-width: 500px;
   text-align: center;
-  color: white;
+  color: black;
+  margin-left: 700px;
+  background: rgba(255,255,255,0.7);
+  text-shadow: rgba(19, 18, 18, 0.5) 1px 0 10px;
+  font-weight: bold;
 }
 
 .info{
@@ -332,6 +402,22 @@ body, html {
 .qualite img{
   width: 120px;
   height: 100px;
+}
+
+.entete{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.entete1{
+  width: 50%;
+
 }
 
 /* PARTNERS SLIDER */

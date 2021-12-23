@@ -297,14 +297,49 @@
             </div>
     </section>
     <section>
-        {# <div class="counters">
-            <h1>Art et Décor en Chiffre</h1>
-            <span>Plus de </span><span class="counter">50</span><span> ANNÉES DANS LE SECTEUR</span>
-            <span>Plus de </span><span class="counter">1300</span><span> TEINTES</span>
-            <span>Plus de </span><span class="counter">5000</span>
-            <span>Plus d' </span><span class="counter">1.000.000</span><span> € DE CHIFFRES D'AFFAIRES</span>
-        </div> #}
-<span class='numscroller' data-min='1' data-max='1000' data-delay='10' data-increment='1'>1000</span>
+        <div class="entete">
+            <div class="entete1">
+                <h1>PRESENTATION</h1>
+                <h2>VENTE DE PEINTURES POUR PROFESSIONNELS</h2>
+                <p>
+                    Découvrez toutes les peintures vendues par votre grossiste !
+                    Depuis plusieurs années, l’établissement Art et Décor
+                    réalise la vente de nombreuses références de peintures pour les professionnels.
+                    Nous disposons d’un stock conséquent de peintures professionnelles et de marques de renommée :
+                    vous trouverez dans ce point de vente tout le nécessaire dont vous avez besoin.
+                </p>
+                <a href="{{ path('products') }}" class="discover">Découvrez nos produits</a>
+                <div class="entete-img">
+                    <img src="{{ asset('assets/pictures/entete.jpg') }}"/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="chiffre">
+              <video autoplay muted loop>
+                <source src="{{ asset('assets/pictures/painting.mp4') }}" type="video/mp4">
+            </video>
+            <div class="chiffres">
+            <h1>Nos chiffres clés</h1>
+                <div class="weave">
+                    <span class='numscroller' style="font-size:25px;" data-min='1' data-max='30' data-delay='10' data-increment='1'>30</span><br/>
+                    <span>Années dans le secteur</span>
+                </div>
+                <div class="weave">
+                    <span>Plus de </span></br>
+                    <span class='numscroller' style="font-size:25px;" data-min='1' data-max='3000' data-delay='100' data-increment='1'>3000</span><br><span>références de teintes</span>
+                </div>
+                <div class="weave">
+                    <span>Plus de </span></br>
+                    <span class='numscroller' style="font-size:25px;" data-min='1' data-max='20' data-delay='100' data-increment='1'>20</span><span><br>partenaires</span>
+                </div>
+                <div class="weave">
+                    <span class='numscroller' style="font-size:25px;" data-min='1' data-max='100' data-delay='100' data-increment='1'>100</span><span> %</span><br/>
+                    <span>français</span>
+                </div>
+            </div>
+        </div>
     </section>
     <section>
         <div class="info">
@@ -338,6 +373,7 @@
             </div>
         </div>
         <div class="info2">
+            <h1>Notre Engagement</h1>
             <div class="ecolabel">
                 <img src="{{ asset('assets/pictures/environnement.jpg') }}" alt="Icone Environnement"/>
             </div>
@@ -358,66 +394,61 @@
             </div>
         </div>
     </section>
-    <section>
-        <div class="presentation1">
-            
-        </div>
-    </section>
     <section class="presentation">
-        <h1>Pourquoi choisir Art et Décor</h1>
-        <div class="row mt-75 space-alignment mb-0">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="features dark-bg-shadow font-light">
-                <img src="{{ asset('assets/pictures/polyvalence.jpg') }}"/>
+        <div class="parallax">
+            <h1>Nos Atouts</h1>
+            <div class="row mt-75 space-alignment mb-0">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="features dark-bg-shadow font-light">
                     <h2>Polyvalence</h2>
-                    <p>
-                        offre une gamme complète qui permet de répondre au besoin de peindre tous supports selon tous les savoir-faires 
-                        (application manuelle ou à la machine).
-                    </p>
+                    <img src="{{ asset('assets/pictures/polyvalence.jpg') }}"/>
+                        <p>
+                            Offre une gamme complète
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="features dark-bg-shadow font-light">
-                    <img src="{{ asset('assets/pictures/qualite.jpg') }}"/>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="features dark-bg-shadow font-light">
                     <h2>Qualité</h2>
-                    <p>
-                        De meilleurs ingrédients pour un meilleur aspect
-                    </p>
+                        <img src="{{ asset('assets/pictures/qualite.png') }}"/>
+                        <p>
+                            De meilleurs ingrédients pour un meilleur aspect
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="features dark-bg-shadow font-light">
-                <img src="{{ asset('assets/pictures/made-in-fr.jpg') }}"/>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="features dark-bg-shadow font-light">
                     <h2>100% Français</h2>
+                    <img src="{{ asset('assets/pictures/made-in-fr.jpg') }}"/>
+                        <p>Tous nos produits sont fabriqués en France</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="features dark-bg-shadow font-light">
-                <img src="{{ asset('assets/pictures/analyse.jpg') }}"/>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="features dark-bg-shadow font-light">
                     <h2>Ecoute et Analyse</h2>
-                    <p>
-                        Nous sommes avant tout là pour entendre vos besoins et vos attentes afin de mettre en place, avec vous, 
-                        la stratégie d'accompagnement la plus adaptée.
-                    </p>
+                    <img src="{{ asset('assets/pictures/analyse.jpg') }}"/>
+                        <p>
+                            Entendre vos besoins et vos attentes
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="features dark-bg-shadow font-light">
-                <img src="{{ asset('assets/pictures/expertise.jpg') }}"/>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="features dark-bg-shadow font-light">
                     <h2>Expertise</h2>
-                    <p>
-                        Nous sommes une Équipe de professionnels venant d’horizons différents, possédant des compétences variées et complémentaires. 
-                        Mais notre volonté est commune : vous apporter une meilleure qualité pour vos travaux.
-                    </p>
+                    <img src="{{ asset('assets/pictures/expertise.jpg') }}"/>
+                        <p>
+                            Professionnels venant d’horizons différents, possédant des compétences variées et complémentaires
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="features dark-bg-shadow font-light">
-                <img src="{{ asset('assets/pictures/accompagnement.jpg') }}"/>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="features dark-bg-shadow font-light">
                     <h2>Accompagnement</h2>
-                    <p>
-                        Les solutions que nous vous proposons sont élaborées avec vous tout au long de notre intervention.
-                    </p>
+                    <img src="{{ asset('assets/pictures/accompagnement.jpg') }}"/>
+                        <p>
+                            Les solutions que nous vous proposons sont élaborées avec vous tout au long de notre intervention
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
