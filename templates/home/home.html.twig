@@ -139,7 +139,25 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-
+    <section>
+        <div class="entete">
+            <div class="entete1">
+                <small>PRESENTATION</small>
+                <h2>VENTE DE PEINTURES POUR PROFESSIONNELS</h2>
+                <p>
+                    Découvrez toutes les peintures vendues par votre grossiste !
+                    Depuis plusieurs années, l’établissement Art et Décor
+                    réalise la vente de nombreuses références de peintures pour les professionnels.
+                    Nous disposons d’un stock conséquent de peintures professionnelles et de marques de renommée :
+                    vous trouverez dans ce point de vente tout le nécessaire dont vous avez besoin.
+                </p>
+                <a href="{{ path('products') }}" class="discover">Découvrez nos produits</a>
+            </div>
+            <div class="entete-img">
+                <img src="{{ asset('assets/pictures/entete.jpg') }}"/>
+            </div>
+        </div>
+    </section>
     <section class="categories">
         <h1>Que désirez vous peindre?</h1>
         <p style="color:#777777; text-align:center; padding:0;">Trouvez comment procéder et choisissez le produit le plus adéquat pour votre espace et surface.</p>
@@ -297,25 +315,6 @@
             </div>
     </section>
     <section>
-        <div class="entete">
-            <div class="entete1">
-                <h1>PRESENTATION</h1>
-                <h2>VENTE DE PEINTURES POUR PROFESSIONNELS</h2>
-                <p>
-                    Découvrez toutes les peintures vendues par votre grossiste !
-                    Depuis plusieurs années, l’établissement Art et Décor
-                    réalise la vente de nombreuses références de peintures pour les professionnels.
-                    Nous disposons d’un stock conséquent de peintures professionnelles et de marques de renommée :
-                    vous trouverez dans ce point de vente tout le nécessaire dont vous avez besoin.
-                </p>
-                <a href="{{ path('products') }}" class="discover">Découvrez nos produits</a>
-                <div class="entete-img">
-                    <img src="{{ asset('assets/pictures/entete.jpg') }}"/>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
         <div class="chiffre">
               <video autoplay muted loop>
                 <source src="{{ asset('assets/pictures/painting.mp4') }}" type="video/mp4">
@@ -323,74 +322,21 @@
             <div class="chiffres">
             <h1>Nos chiffres clés</h1>
                 <div class="weave">
-                    <span class='numscroller' style="font-size:25px;" data-min='1' data-max='30' data-delay='10' data-increment='1'>30</span><br/>
+                    <span class='numscroller' style="font-size:25px;" data-min='1' data-max='30' data-delay='5' data-increment='1'>30</span><br/>
                     <span>Années dans le secteur</span>
                 </div>
                 <div class="weave">
                     <span>Plus de </span></br>
-                    <span class='numscroller' style="font-size:25px;" data-min='1' data-max='3000' data-delay='100' data-increment='1'>3000</span><br><span>références de teintes</span>
+                    <span class='numscroller' style="font-size:25px;" data-min='1' data-max='3000' data-delay='0.5' data-increment='1'>3000</span><br><span>références de teintes</span>
                 </div>
                 <div class="weave">
                     <span>Plus de </span></br>
-                    <span class='numscroller' style="font-size:25px;" data-min='1' data-max='20' data-delay='100' data-increment='1'>20</span><span><br>partenaires</span>
+                    <span class='numscroller' style="font-size:25px;" data-min='1' data-max='20' data-delay='4' data-increment='1'>20</span><span><br>partenaires</span>
                 </div>
                 <div class="weave">
-                    <span class='numscroller' style="font-size:25px;" data-min='1' data-max='100' data-delay='100' data-increment='1'>100</span><span> %</span><br/>
+                    <span class='numscroller' style="font-size:25px; " data-min='1' data-max='100' data-delay='3' data-increment='1'>100</span><span> %</span><br/>
                     <span>français</span>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="info">
-            <div class="contact">
-                <img src="{{ asset('assets/pictures/Contact.gif') }}" alt="Contact"/><br>
-                <p>
-                    Besoin d'aide ?<br>
-                    <a href="#">Contactez-nous</a>
-                </p>
-            </div>
-            <div class="paiement">
-                <img src="{{ asset('assets/pictures/secure.gif') }}" alt="Paiement Sécurisé"/><br>
-                <p>
-                    Paiement 100% sécurisé<br>
-                    <a href="#">Par carte bancaire</a>
-                </p>
-            </div>
-            <div class="port">
-                <img src="{{ asset('assets/pictures/Port.gif') }}" alt="Frais de port offerts"/><br>
-                <p>
-                    Frais de port offerts<br>
-                    <a href="#">Dès 100€ d'achat</a>
-                </p>
-            </div>
-            <div class="livraison">
-                <img src="{{ asset('assets/pictures/Livraison.gif') }}" alt="Livraison rapide"/><br>
-                <p>
-                    Livraison rapide<br>
-                    <a href="#">2 à 5 jours ouvrés</a>
-                </p>
-            </div>
-        </div>
-        <div class="info2">
-            <h1>Notre Engagement</h1>
-            <div class="ecolabel">
-                <img src="{{ asset('assets/pictures/environnement.jpg') }}" alt="Icone Environnement"/>
-            </div>
-            <div class="zone-verte">
-                <img src="{{ asset('assets/pictures/zone-verte.jpg') }}" alt="Icone Zone Verte"/>
-            </div>
-            <div class="zone-bleue">
-                <img src="{{ asset('assets/pictures/zone-bleue.jpg') }}" alt="Icone Zone bleue"/>
-            </div>
-            <div class="COV">
-                <img src="{{ asset('assets/pictures/cov.jpg') }}" alt="Icone COV"/>
-            </div>
-            <div class="hygiene">
-                <img src="{{ asset('assets/pictures/hygiene.jpg') }}" alt="Icone Hygiene"/>
-            </div>
-            <div class="qualite">
-                <img src="{{ asset('assets/pictures/air-qualite.png') }}" alt="Icone Qualité"/>
             </div>
         </div>
     </section>
@@ -453,24 +399,73 @@
             </div>
         </div>
     </section>
-    {# <section class="partners">
-        <div class="logo-slider">
-            <h1>Nos partenaires</h1>
-            <div class="logo-slide-track">
+    <section>
+        <div class="info">
+            <div class="contact">
+                <img src="{{ asset('assets/pictures/Contact.gif') }}" alt="Contact"/><br>
+                <p>
+                    Besoin d'aide ?<br>
+                    <a href="#">Contactez-nous</a>
+                </p>
+            </div>
+            <div class="paiement">
+                <img src="{{ asset('assets/pictures/secure.gif') }}" alt="Paiement Sécurisé"/><br>
+                <p>
+                    Paiement 100% sécurisé<br>
+                    <a href="#">Par carte bancaire</a>
+                </p>
+            </div>
+            <div class="port">
+                <img src="{{ asset('assets/pictures/Port.gif') }}" alt="Frais de port offerts"/><br>
+                <p>
+                    Frais de port offerts<br>
+                    <a href="#">Dès 100€ d'achat</a>
+                </p>
+            </div>
+            <div class="livraison">
+                <img src="{{ asset('assets/pictures/Livraison.gif') }}" alt="Livraison rapide"/><br>
+                <p>
+                    Livraison rapide<br>
+                    <a href="#">2 à 5 jours ouvrés</a>
+                </p>
+            </div>
+        </div>
+        <div class="info2">
+            <h1>Notre Engagement</h1>
+            <div class="ecolabel">
+                <img src="{{ asset('assets/pictures/environnement.jpg') }}" alt="Icone Environnement"/>
+            </div>
+            <div class="zone-verte">
+                <img src="{{ asset('assets/pictures/zone-verte.jpg') }}" alt="Icone Zone Verte"/>
+            </div>
+            <div class="zone-bleue">
+                <img src="{{ asset('assets/pictures/zone-bleue.jpg') }}" alt="Icone Zone bleue"/>
+            </div>
+            <div class="COV">
+                <img src="{{ asset('assets/pictures/cov.jpg') }}" alt="Icone COV"/>
+            </div>
+            <div class="hygiene">
+                <img src="{{ asset('assets/pictures/hygiene.jpg') }}" alt="Icone Hygiene"/>
+            </div>
+            <div class="qualite">
+                <img src="{{ asset('assets/pictures/air-qualite.png') }}" alt="Icone Qualité"/>
+            </div>
+        </div>
+    </section>
+    <section class="partners">
+        <h1>Nos partenaires</h1>
+        <div class="partners-logos slider">
                 <div class="slide">
                     <img src="{{ asset('assets/pictures/LPF.png') }}" alt="La Pierre Fertile"/>
                 </div>
                 <div class="slide">
-                <img src="{{ asset('assets/pictures/toupret.png') }}" alt="Toupret"/>
+                <img src="{{ asset('assets/pictures/toupret.jpg') }}" alt="Toupret"/>
                 </div>
                 <div class="slide">
                     <img src="{{ asset('assets/pictures/san-marco.png') }}" alt="San Marco"/>
                 </div>
                 <div class="slide">
                     <img src="{{ asset('assets/pictures/keria2.png') }}" alt="Keria"/>
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/CPM.png') }}" alt="Couleurs et Peintures du Midi"/>
                 </div>
                 <div class="slide">
                     <img src="{{ asset('assets/pictures/logo-comus.jpg') }}" alt="Comus"/>
@@ -500,9 +495,6 @@
                     <img src="{{ asset('assets/pictures/bostik.jpg') }}" alt="Bostik"/>
                 </div>
                 <div class="slide">
-                   <img src="{{ asset('assets/pictures/semin.png') }}" alt="Semin"/>
-                </div>   
-                <div class="slide">
                     <img src="{{ asset('assets/pictures/montana.png') }}" alt="Montana"/>
                 </div>
                 <div class="slide">
@@ -515,15 +507,54 @@
                     <img src="{{ asset('assets/pictures/henkel.png') }}" alt="Henkel"/>
                 </div>
                 <div class="slide">
+                   <img src="{{ asset('assets/pictures/semin.png') }}" alt="Semin"/>
+                </div>
+                <div class="slide">
                     <img src="{{ asset('assets/pictures/sinto.jpg') }}" alt="Sinto"/>
                 </div>
                 <div class="slide">
                     <img src="{{ asset('assets/pictures/zinser.png') }}" alt="Rustoleum"/>
                 </div>
-                <div class="slide"></div>
-                <div class="slide"></div>
-            </div>
+                <div class="slide">
+                    <img src="{{ asset('assets/pictures/dulary.jpg') }}" alt="Dulary"/>
+                </div>
+                   <div class="slide">
+                    <img src="{{ asset('assets/pictures/owatrol.jpg') }}" alt="Owatrol"/>
+                </div>
+                   <div class="slide">
+                    <img src="{{ asset('assets/pictures/euromair.png') }}" alt="Euromair"/>
+                </div>
+                   <div class="slide">
+                    <img src="{{ asset('assets/pictures/fluidemail.png') }}" alt="Fluidemail"/>
+                </div>
+                   <div class="slide">
+                    <img src="{{ asset('assets/pictures/stoppani.jpg') }}" alt="Stoppani"/>
+                </div>
+                   <div class="slide">
+                    <img src="{{ asset('assets/pictures/roulor.jpg') }}" alt="Roulor"/>
+                </div>
+                   <div class="slide">
+                    <img src="{{ asset('assets/pictures/nmc.png') }}" alt="NMC"/>
+                </div>
+                   <div class="slide">
+                    <img src="{{ asset('assets/pictures/rota.png') }}" alt="Rota"/>
+                </div>
+                   <div class="slide">
+                    <img src="{{ asset('assets/pictures/self-deco.jpg') }}" alt="Self Deco"/>
+                </div>
+                   <div class="slide">
+                    <img src="{{ asset('assets/pictures/sofec.png') }}" alt="Sofec"/>
+                </div>
+                <div class="slide">
+                    <img src="{{ asset('assets/pictures/lms.png') }}" alt="La Maison du Sol"/>
+                </div>
+                   <div class="slide">
+                    <img src="{{ asset('assets/pictures/lutece.jpg') }}" alt="Lutèce"/>
+                </div>
+                   <div class="slide">
+                    <img src="{{ asset('assets/pictures/vepro.png') }}" alt="Vepro"/>
+                </div>
         </div>
-    </section> #}
+    </section>
 
 {% endblock %}

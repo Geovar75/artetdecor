@@ -19,8 +19,10 @@
             wholeVisible    :     false,
         });
     });
-    $.fn.scrollzipInit=function(){
-        $('body').prepend("<div style='position:fixed;top:0px;left:0px;width:0;height:0;' id='scrollzipPoint'></div>" );
+    $.fn.scrollzipInit = function () {
+        if (!($('#scrollzipPoint'))) {
+            $('body').prepend("<div style='position:fixed;top:0px;left:0px;width:0;height:0;' id='scrollzipPoint'></div>");
+        }
     };
     $.fn.rollerInit=function(){
         var i=0;
