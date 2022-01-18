@@ -151,10 +151,10 @@ $(document).ready(function(){
         slidesToShow: 6,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 200,
+        autoplaySpeed: 300,
         arrows: false,
         dots: false,
-        pauseOnHover: true,
+        pauseOnHover: false,
         responsive: [{
             breakpoint: 768,
             settings: {

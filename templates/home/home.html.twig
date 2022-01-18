@@ -8,8 +8,6 @@
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
             <li data-target="#myCarousel" data-slide-to="3"></li>
-            <li data-target="#myCarousel" data-slide-to="4"></li>
-            <li data-target="#myCarousel" data-slide-to="5"></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -31,7 +29,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                 <img src="{{ asset('assets/pictures/nuancier.jpg') }}" class="fantasia" alt="Nuancier Fantasia"/>
+                 <img src="{{ asset('assets/pictures/nuancier.png') }}" class="fantasia" alt="Polycrom"/>
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>
@@ -48,7 +46,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="{{ asset('assets/pictures/bio-source.jpg') }}" alt="Peintures biosourcées"/>
+                <img src="{{ asset('assets/pictures/bio-source.png') }}" alt="Peintures biosourcées"/>
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>
@@ -76,58 +74,6 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="{{ asset('assets/pictures/test.png') }}" alt="Sol"/>
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1 style="margin-left:150px;">
-                            <span>
-                                <strong>
-                                <p>
-                                    ✓ Film dur et résistant.
-                                    <br>✓ Très bonne adhérence. 
-                                    <br>✓ Anti-poussière 
-                                    <br>✓ Application et entretien faciles. 
-                                    <br>✓ Aspect satiné-brillant tendu.
-                                </p>
-                                </strong>
-                            </span>
-                        </h1>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('assets/pictures/facade2.png') }}" alt="Façade"/>
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1 style="margin-left:150px;">
-                            <span>
-                                <strong>
-                                <p>
-                                    ✓ Aspect mat minéral.
-                                    <br>✓ Très bonne adhérence. 
-                                    <br>✓ Effet perlant hydrophobe.
-                                    <br>✓ Très bonne résistance à la salissure.
-                                </p>
-                                </strong>
-                            </span>
-                        </h1>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('assets/pictures/rouleau.png') }}" alt="Rouleau"/>
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>
-                            <span>
-                                <strong><p>Solutions efficaces</p></strong><br>
-                                <strong><p>Peintures - Revêtements - Outillage</p>
-                            </span>
-                        </h1>
-                    </div>
-                </div>
-            </div>
         </div>
         
         <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -140,10 +86,18 @@
         </a>
     </div>
     <section>
+        <div class="grossiste">
+            <img src="{{ asset('assets/pictures/peinture-de-maison.png') }}" alt="Logo Maison"/>
+            <h1>Distributeur de peintures, revêtements et outillages</h1>
+            <p>Négoce en peintures bâtiments, décoration, industrie, papier peint, revêtements de sol et mur, faux plafond, matériels et outillages.</p>
+            <a href="{{ path('products') }}" class="discover">Découvrez nos produits</a>
+        </div>
+    </section>
+    <section>
         <div class="entete">
             <div class="entete1">
                 <small>PRESENTATION</small>
-                <h2>VENTE DE PEINTURES POUR PROFESSIONNELS</h2>
+                <h2>PEINTURES, REVÊTEMENTS ET OUTILLAGES POUR PROFESSIONNELS ET PARTICULIERS</h2>
                 <p>
                     Découvrez toutes les peintures vendues par votre grossiste !
                     Depuis plusieurs années, l’établissement Art et Décor
@@ -340,6 +294,31 @@
             </div>
         </div>
     </section>
+        <section>
+        <div class="info2">
+            <h1>Notre Engagement</h1>
+            <div class="info3">
+                <div class="ecolabel">
+                    <img src="{{ asset('assets/pictures/environnement.jpg') }}" alt="Icone Environnement"/>
+                </div>
+                <div class="zone-verte">
+                    <img src="{{ asset('assets/pictures/zone-verte.jpg') }}" alt="Icone Zone Verte"/>
+                </div>
+                <div class="zone-bleue">
+                    <img src="{{ asset('assets/pictures/zone-bleue.jpg') }}" alt="Icone Zone bleue"/>
+                </div>
+                <div class="COV">
+                    <img src="{{ asset('assets/pictures/cov.jpg') }}" alt="Icone COV"/>
+                </div>
+                <div class="hygiene">
+                    <img src="{{ asset('assets/pictures/hygiene.jpg') }}" alt="Icone Hygiene"/>
+                </div>
+                <div class="qualite">
+                    <img src="{{ asset('assets/pictures/air-qualite.png') }}" alt="Icone Qualité"/>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="presentation">
         <div class="parallax">
             <h1>Nos Atouts</h1>
@@ -399,65 +378,9 @@
             </div>
         </div>
     </section>
-    <section>
-        <div class="info">
-            <div class="contact">
-                <img src="{{ asset('assets/pictures/Contact.gif') }}" alt="Contact"/><br>
-                <p>
-                    Besoin d'aide ?<br>
-                    <a href="#">Contactez-nous</a>
-                </p>
-            </div>
-            <div class="paiement">
-                <img src="{{ asset('assets/pictures/secure.gif') }}" alt="Paiement Sécurisé"/><br>
-                <p>
-                    Paiement 100% sécurisé<br>
-                    <a href="#">Par carte bancaire</a>
-                </p>
-            </div>
-            <div class="port">
-                <img src="{{ asset('assets/pictures/Port.gif') }}" alt="Frais de port offerts"/><br>
-                <p>
-                    Frais de port offerts<br>
-                    <a href="#">Dès 100€ d'achat</a>
-                </p>
-            </div>
-            <div class="livraison">
-                <img src="{{ asset('assets/pictures/Livraison.gif') }}" alt="Livraison rapide"/><br>
-                <p>
-                    Livraison rapide<br>
-                    <a href="#">2 à 5 jours ouvrés</a>
-                </p>
-            </div>
-        </div>
-        <div class="info2">
-            <h1>Notre Engagement</h1>
-            <div class="ecolabel">
-                <img src="{{ asset('assets/pictures/environnement.jpg') }}" alt="Icone Environnement"/>
-            </div>
-            <div class="zone-verte">
-                <img src="{{ asset('assets/pictures/zone-verte.jpg') }}" alt="Icone Zone Verte"/>
-            </div>
-            <div class="zone-bleue">
-                <img src="{{ asset('assets/pictures/zone-bleue.jpg') }}" alt="Icone Zone bleue"/>
-            </div>
-            <div class="COV">
-                <img src="{{ asset('assets/pictures/cov.jpg') }}" alt="Icone COV"/>
-            </div>
-            <div class="hygiene">
-                <img src="{{ asset('assets/pictures/hygiene.jpg') }}" alt="Icone Hygiene"/>
-            </div>
-            <div class="qualite">
-                <img src="{{ asset('assets/pictures/air-qualite.png') }}" alt="Icone Qualité"/>
-            </div>
-        </div>
-    </section>
     <section class="partners">
         <h1>Nos partenaires</h1>
         <div class="partners-logos slider">
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/LPF.png') }}" alt="La Pierre Fertile"/>
-                </div>
                 <div class="slide">
                 <img src="{{ asset('assets/pictures/toupret.jpg') }}" alt="Toupret"/>
                 </div>
@@ -556,5 +479,36 @@
                 </div>
         </div>
     </section>
+     <section>
+        <div class="info">
+            <div class="contact">
+                <img src="{{ asset('assets/pictures/Contact.gif') }}" alt="Contact"/><br>
+                <p>
+                    Besoin d'aide ?<br>
+                    <a href="#">Contactez-nous</a>
+                </p>
+            </div>
+            <div class="paiement">
+                <img src="{{ asset('assets/pictures/secure.gif') }}" alt="Paiement Sécurisé"/><br>
+                <p>
+                    Paiement 100% sécurisé<br>
+                    <a href="#">Par carte bancaire</a>
+                </p>
+            </div>
+            <div class="port">
+                <img src="{{ asset('assets/pictures/Port.gif') }}" alt="Frais de port offerts"/><br>
+                <p>
+                    Frais de port offerts<br>
+                    <a href="#">Dès 100€ d'achat</a>
+                </p>
+            </div>
+            <div class="livraison">
+                <img src="{{ asset('assets/pictures/Livraison.gif') }}" alt="Livraison rapide"/><br>
+                <p>
+                    Livraison rapide<br>
+                    <a href="#">2 à 5 jours ouvrés</a>
+                </p>
+            </div>
+        </div>
 
 {% endblock %}

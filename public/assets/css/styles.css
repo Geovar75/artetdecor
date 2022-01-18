@@ -126,7 +126,9 @@ body, html {
 
 /* CAROUSEL */
 #myCarousel{
-  margin-top: 79px;
+  padding-top: 90px;
+  max-width: 90%;
+  margin: auto;
 }
 
 .carousel-caption{
@@ -144,6 +146,10 @@ body, html {
   font-size: 35px;
   text-shadow: rgba(19, 18, 18, 0.5) 1px 0 10px;
   margin: 2px;
+  color: white;
+  background-color: rgba(0,0,0,0.6);
+  border: black;
+  padding: 2px;
 }
 
 .carousel-item img {
@@ -183,6 +189,20 @@ body, html {
 /* END CAROUSEL */
 
 /* HOME PAGE */
+.grossiste{
+  display: flex;
+  align-items: center;
+  background-color: #efa601;
+  height: 300px;
+  max-width: 1903px;
+  margin: auto;
+}
+
+.grossiste img{
+  width: 100px;
+  height: 100px;
+}
+
 .weave {
   width: 150px;
   height: 150px;
@@ -203,10 +223,15 @@ body, html {
 }
 
 .chiffres h1{
-  color: #0b104f;
   position: absolute;
   margin-bottom: 300px;
   display: block;
+  max-width: 500px;
+  text-align: center;
+  color: black;
+  background: rgba(255,255,255,0.7);
+  text-shadow: rgba(19, 18, 18, 0.5) 1px 0 10px;
+  font-weight: bold;
 }
 
 .chiffres{
@@ -218,7 +243,7 @@ body, html {
 
 .chiffre{
   position: relative;
-  margin: 50px 0 500px 0;
+  margin: 50px 0 200px 0;
 }
 
 .chiffre video{
@@ -294,11 +319,6 @@ body, html {
   margin-bottom: 35px;
 }
 
-/* .places img{
-  width: 200px;
-  height: 180px;
-} */
-
 .flex, .flex2, .flex3, .flex4, .flex5, .flex6, .flex7, .flex8, .flex9{
   display: flex;
   text-align: center;
@@ -308,11 +328,6 @@ body, html {
   text-align: center;
   margin: 80px 30px 0 0;
 }
-
-/* .paint img, .paint2 img, .paint3 img, .paint4 img, .paint5 img, .paint6 img, .paint7 img, .paint8 img{
-  width: 380px;
-  height: 350px;
-} */
 
 .first{
   max-width: 900px;
@@ -380,6 +395,15 @@ body, html {
 }
 
 .info2{
+  margin : 0px 0 100px 0;
+}
+
+.info2 h1{
+  text-align: center;
+  font-family: "Century Gothic";
+}
+
+.info3{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -428,6 +452,11 @@ body, html {
   margin-bottom: 50px;
 }
 
+.partners h1{
+  text-align: center;
+  font-family: "Century Gothic";
+}
+
 .partners-logo{
   width: 100vw;
   overflow: hidden;
@@ -437,14 +466,6 @@ body, html {
   display: flex!important;
   align-items: center;
 }
-/* .slick-slide {
-  margin: 0px 20px;
-  display: none;
-  float: left;
-  height: 100%;
-  min-height: 1px;
-  outline: none;
-} */
 
 .slick-slide {
   margin: 0px 20px;
@@ -457,7 +478,9 @@ body, html {
 }
 
 .slick-slide img {
-  width: 100%;
+  width: 200px;
+  height: 150px;
+
 }
 
 .slick-slide.c {
