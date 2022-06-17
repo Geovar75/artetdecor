@@ -34,12 +34,6 @@ body, html {
   margin: 0 !important;
 }
 
-.title {
-  color: inherit;
-  width: 200px;
-  height: 36px;
-}
-
 /* BOOTSTRAP */
 .bd-placeholder-img {
   font-size: 1.125rem;
@@ -56,6 +50,30 @@ body, html {
   }
 }
 /* END BOOTSTRAP */
+
+/*----------------------- Preloader -----------------------*/
+/* body.preloader-site {
+  overflow: hidden;
+} */
+
+.preloader-wrapper {
+  height: 100%;
+  width: 100%;
+  background: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+}
+
+.preloader-wrapper .preloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 120px;
+}
 
 /* NAVBAR */
 .navbar {
@@ -110,8 +128,6 @@ body, html {
   width: 100%;
   height: 70px;
 }
-
-
 /* SEARCH BAR */
 .search a{
   padding:0;
@@ -126,9 +142,14 @@ body, html {
 
 /* CAROUSEL */
 #myCarousel{
-  padding-top: 90px;
-  max-width: 90%;
+  padding-top: 70px;
   margin: auto;
+  height: 100vh;
+}
+
+.carousel-item{
+  height: 100vh;
+  overflow: hidden;
 }
 
 .carousel-caption{
@@ -153,9 +174,21 @@ body, html {
 }
 
 .carousel-item img {
-  width: 100%;
-  height: 100%;
-  padding: 0 50px 0 50px;
+  height: 736px;
+  width: 1400px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.carousel-control-prev{
+  top: -150px;
+  left: -50px;
+}
+
+.carousel-control-next{
+  right: -50px;
+  top: -150px;
 }
 
 .carousel-control-prev-icon{
@@ -168,6 +201,10 @@ body, html {
   height: 40px;
   width: 40px;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
+}
+
+.carousel-indicators{
+  bottom: 150px;
 }
 
 .carousel-indicators li{
@@ -184,23 +221,90 @@ body, html {
   color: white;
   background: linear-gradient(45deg, #05abe0 0%, #2d71b6 100%);
   position: relative;
-  bottom: -220px;
+  margin: 0 auto;
+}
+
+.discover1{
+  display: block;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: white;
+  background: linear-gradient(45deg, #05abe0 0%, #2d71b6 100%);
+  position: relative;
+  width: 300px;
+  margin : 0 auto;
+  text-align: center;
+
 }
 /* END CAROUSEL */
 
 /* HOME PAGE */
-.grossiste{
-  display: flex;
-  align-items: center;
-  background-color: #efa601;
-  height: 300px;
-  max-width: 1903px;
-  margin: auto;
+.categories{
+  margin: 50px 0 20px 0;
 }
 
-.grossiste img{
-  width: 100px;
-  height: 100px;
+.categories h1{
+  font-family: "Century Gothic";
+  text-align: center;
+}
+
+.categories .title{
+  color: #777777;
+  text-align:center; 
+  padding:0;
+}
+
+.places h2{
+  text-align: center;
+}
+
+.inside{
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.content img{
+    width: 236px;
+    height: 236px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.salle-a-manger, .bureau, .boiseries, .salon, .salle-de-bain, .facade, .chambre, .cuisine, .fer, .sol{
+  transition: transform .2s;
+  position: relative;
+}
+
+.salle-a-manger:hover, .bureau:hover, .boiseries:hover, .salon:hover, .salle-de-bain:hover, .facade:hover, .chambre:hover, .cuisine:hover, .fer:hover, .sol:hover{
+    -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.inside span{
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,0);
+    display: none;
+    width: 95%;
+    font-size: 30px;
+    text-shadow: rgba(19, 18, 18, 0.5) 1px 0 10px;
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    border: black;
+    padding: 2px;
+}
+
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
 }
 
 .weave {
@@ -254,100 +358,6 @@ body, html {
   filter:opacity(30%);
 }
 
-.salle-a-manger, .salon, .bureau, .boiseries, .salle-de-bain, .facade, .chambre, .cuisine, .fer{
-  position:relative;
-  display:inline-block;
-}
-
-.content{
-  max-width: 850px;
-}
-
-.content img{
-  cursor: pointer;
-}
-
-.inside{
-  display: none;
-  text-align: center;
-  line-height: 180px;
-  margin: auto;
-  color: white;
-  cursor: pointer;
-}
-
-.paint, .paint2, .paint3, .paint4, .paint5, .paint6, .paint7, .paint8, .paint9{
-  margin: 200px 50px 0 0;
-}
-
-.places h2{
-  text-align: center;
-}
-
-.salle-a-manger:hover .inside, .salon:hover .inside, .bureau:hover .inside, .boiseries:hover .inside, .salle-de-bain:hover .inside, .facade:hover .inside, .chambre:hover .inside, .cuisine:hover .inside, .fer:hover .inside {
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,.3);
-  background-size: 100%;
-  position:absolute;
-  top:0;
-  left:0;
-  display:inline-block;
-  }
-
-.places{
-  display: flex;
-  margin-left: 5px;
-  justify-content: space-around;
-}
-
-.categories .places .first img{
-  margin: 5px;
-  filter: gray; /* IE5+ */
-  -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
-  -webkit-transition: all 0.4s ease-in-out;
-}
-
-.categories .places .first img:hover{
-  filter: none;
-  -webkit-filter: grayscale(0);
-  -webkit-transform: scale(1.01);
-}
-
-.categories h1{
-  text-align: center;
-  margin-bottom: 35px;
-}
-
-.flex, .flex2, .flex3, .flex4, .flex5, .flex6, .flex7, .flex8, .flex9{
-  display: flex;
-  text-align: center;
-}
-
-.flex p, .flex2 p, .flex3 p, .flex4 p, .flex5 p, .flex6 p, .flex7 p, .flex8 p, .flex9 p{
-  text-align: center;
-  margin: 80px 30px 0 0;
-}
-
-.first{
-  max-width: 900px;
-  position:relative;
-}
-
-.first img{
-  cursor: pointer;
-}
-
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-}
-
 .parallax{
     background: url('../pictures/parallax.jpg') fixed no-repeat;
     background-size: cover;
@@ -379,6 +389,11 @@ body, html {
   font-weight: bold;
 }
 
+.info2 h1{
+  font-family: "Century Gothic";
+  text-align: center;
+}
+
 .info{
   display : flex;
   justify-content: space-evenly;
@@ -387,18 +402,18 @@ body, html {
 
 .info p{
   text-align: center;
+  margin: 0 auto;
 }
 
-.info img{
-  display: block;
-  margin: 0 auto;
+.info div{
+  text-align: center;
 }
 
 .info2{
   margin : 0px 0 100px 0;
 }
 
-.info2 h1{
+.services h1{
   text-align: center;
   font-family: "Century Gothic";
 }
@@ -415,36 +430,37 @@ body, html {
 }
 
 .entete{
-  margin: 50px 0 50px 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  display:flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
 
-.entete1 small{
+.entete1, .entete2, .entete3{
+  display : flex;
+  align-self: center;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.entete-1, .entete-2, .entete-3{
+  align-self: center;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.entete1 small, .entete-2 small, .entete-3 small{
   letter-spacing: 5px;
   color: grey;
 }
 
-.entete1{
-  max-width: 35%;
-}
-
-.entete-img{
-  max-width: 50%;
-}
-
-.entete-img img{
-  width: 540px;
+.entete-img img, .entete2-img img, .entete3-img img{
+  width: 680px;
   height: 473px;
 }
 
-.entete1 .discover{
-  bottom: 0;
-  margin: auto;
-  display: block;
-  max-width: 210px;
-  padding: 10px;
+.info h1{
+  text-align: center;
+  font-family: "Century Gothic";
 }
 
 /* PARTNERS SLIDER */

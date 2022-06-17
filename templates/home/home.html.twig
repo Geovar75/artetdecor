@@ -1,514 +1,465 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Art et Décor | Accueil{% endblock %}
-{% block content %}
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{ asset('assets/pictures/maison.jpg') }}" class="maison" alt="maison"/>
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>
-                            <span>
-                                <strong><p>Peintures, Décoration Intérieures et Extérieures</p></strong>
-                            </span>
-                        </h1>
-                        <h1>
-                            <span>
-                                <strong><p>Au service des professionnels et des particuliers à la recherche de produits de qualités et de conseils technique</p></strong>
-                            </span>
-                        </h1>
-                        <a href="{{ path('products') }}" class="discover">Découvrez nos produits</a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                 <img src="{{ asset('assets/pictures/nuancier.png') }}" class="fantasia" alt="Polycrom"/>
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>
-                            <span>
-                                <strong><p>Plus de 1300 couleurs</p></strong>
-                            </span>
-                        </h1>
-                        <h1>
-                            <span>
-                                <strong><p>Trouvez votre couleur qui vous correspond</p></strong>
-                            </span>
-                        </h1>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('assets/pictures/bio-source.png') }}" alt="Peintures biosourcées"/>
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>
-                            <span>
-                                <strong><p>Découvrez nos dernières nouveautés !</p></strong>
-                            </span>
-                        </h1>
-                        <h1>
-                            <span>
-                                <strong><p>Peinture à base de résines naturelles</p></strong>
-                            </span>
-                        </h1>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('assets/pictures/Ultimium.png') }}" alt="Ultimium" style="height: 700px;"/>
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>
-                            <span>
-                                <strong><p>PROMO! 3 fûts achetés, 1 offert</p></strong>
-                            </span>
-                        </h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-    <section>
-        <div class="grossiste">
-            <img src="{{ asset('assets/pictures/peinture-de-maison.png') }}" alt="Logo Maison"/>
-            <h1>Distributeur de peintures, revêtements et outillages</h1>
-            <p>Négoce en peintures bâtiments, décoration, industrie, papier peint, revêtements de sol et mur, faux plafond, matériels et outillages.</p>
-            <a href="{{ path('products') }}" class="discover">Découvrez nos produits</a>
-        </div>
-    </section>
-    <section>
-        <div class="entete">
-            <div class="entete1">
-                <small>PRESENTATION</small>
-                <h2>PEINTURES, REVÊTEMENTS ET OUTILLAGES POUR PROFESSIONNELS ET PARTICULIERS</h2>
-                <p>
-                    Découvrez toutes les peintures vendues par votre grossiste !
-                    Depuis plusieurs années, l’établissement Art et Décor
-                    réalise la vente de nombreuses références de peintures pour les professionnels.
-                    Nous disposons d’un stock conséquent de peintures professionnelles et de marques de renommée :
-                    vous trouverez dans ce point de vente tout le nécessaire dont vous avez besoin.
-                </p>
-                <a href="{{ path('products') }}" class="discover">Découvrez nos produits</a>
-            </div>
-            <div class="entete-img">
-                <img src="{{ asset('assets/pictures/entete.jpg') }}"/>
-            </div>
-        </div>
-    </section>
-    <section class="categories">
-        <h1>Que désirez vous peindre?</h1>
-        <p style="color:#777777; text-align:center; padding:0;">Trouvez comment procéder et choisissez le produit le plus adéquat pour votre espace et surface.</p>
-            <div class="places">
-                <div class="content">
-                    <div class="salle-a-manger">
-                        <img src="{{ asset('assets/pictures/salle-a-manger.jpg') }}" alt="Salle a manger"/>
-                        <div class="inside"><p>Salle a manger</p></div>
-                    </div>
-                    <div class="salon">
-                        <img src="{{ asset('assets/pictures/salon.jpg') }}" alt="Salon"/>
-                        <div class="inside"><p>Salon</p></div>
-                    </div>
-                    <div class="bureau">
-                        <img src="{{ asset('assets/pictures/bureau.jpg') }}" alt="Bureau"/>
-                        <div class="inside"><p>Bureau</p></div>
-                    </div>
-                    <div class="boiseries">
-                        <img src="{{ asset('assets/pictures/boiseries.jpg') }}" alt="Boiseries"/>
-                        <div class="inside"><p>Boiseries</p></div>
-                    </div>
-                    <div class="salle-de-bain">
-                        <img src="{{ asset('assets/pictures/salle-de-bain.jpg') }}" alt="Salle de bain"/>
-                        <div class="inside"><p>Salle de bain</p></div>
-                    </div>
-                    <div class="facade">
-                        <img src="{{ asset('assets/pictures/facade.jpg') }}" alt="Façade"/>
-                        <div class="inside"><p>Façade</p></div>
-                    </div>
-                    <div class="chambre">
-                        <img src="{{ asset('assets/pictures/chambre.jpg') }}" alt="Chambre"/>
-                        <div class="inside"><p>Chambre</p></div>
-                    </div>
-                    <div class="cuisine">
-                        <img src="{{ asset('assets/pictures/cuisine.jpg') }}" alt="Cuisine"/>
-                        <div class="inside"><p>Cuisine</p></div>
-                    </div>
-                    <div class="fer">
-                        <img src="{{ asset('assets/pictures/fer.png') }}" alt="Fer"/>
-                        <div class="inside"><p>Fer</p></div>
-                    </div>
-                </div>
-                <div class="paint">
-                    <h2>Peinture sur mesure pour votre projet</h2>
-                    <div class="flex">
-                        <p class="show1">
-                            ✓ Finition irréprochable exempte de reprise.
-                            <br>✓ Blancheur parfaite et durable. 
-                            <br>✓ Excellente opacité.
-                            <br>✓ Matité absolue.
-                        </p>
-                        <img id="product" src="{{ asset('assets/pictures/ultimium-o.png') }}"/>
-                    </div>
-                </div>
-                <div class="paint2">
-                    <h2>Peinture sur mesure pour votre projet</h2>
-                    <div class="flex2">
-                        <p class="show2">
-                            ✓ Grain fin semi-tendu.
-                            <br>✓ Excellente opacité.
-                            <br>✓ Application sans reprise.
-                            <br>✓ Grande polyvalence d’emploi.
-                        </p>
-                        <img id="product" src="{{ asset('assets/pictures/victory-mat.png') }}"/>
-                    </div>
-                </div>
-                <div class="paint3">
-                    <h2>Peinture sur mesure pour votre projet</h2>
-                    <div class="flex3">
-                        <p class="show3">
-                            ✓ Opacifiante.
-                            <br>✓ Application aisée.
-                            <br>✓ Pouvoir garnissant élevé.
-                            <br>✓ Grande polyvalence.
-                        </p>
-                        <img id="product" src="{{ asset('assets/pictures/murnyl-plus.png') }}"/>
-                    </div>
-                </div>
-                <div class="paint4">
-                    <h2>Peinture sur mesure pour votre projet</h2>
-                    <div class="flex4">
-                        <p class="show4">
-                            ✓ Durabilité élevée.
-                            <br>✓ Hydrofuge et microporeuse.
-                            <br>✓ Belle finition mettant en valeur le veinage du bois.
-                            <br>✓ Protection renforcée du film.
-                        </p>
-                        <img id="product" src="{{ asset('assets/pictures/boisea-mat-evolution.png') }}"/>
-                    </div>
-                </div>
-                <div class="paint5">
-                    <h2>Peinture sur mesure pour votre projet</h2>
-                    <div class="flex5">
-                        <p class="show5">
-                            ✓ Garnissante.
-                            <br>✓ Légèrement pochée.
-                            <br>✓ Lessivable.
-                            <br>✓ Parfaitement adaptée aux ERP et collectivités.
-                        </p>
-                        <img id="product" src="{{ asset('assets/pictures/sofralo-satin.png') }}"/>
-                    </div>
-                </div>
-                <div class="paint6">
-                    <h2>Peinture sur mesure pour votre projet</h2>
-                    <div class="flex6">
-                        <p class="show6">
-                            ✓ Aspect mat minéral.
-                            <br>✓ Microporosité élevée.
-                            <br>✓ Effet perlant hydrophobe.
-                            <br>✓ Très bonne résistance à la salissure.
-                        </p>
-                        <img id="product" src="{{ asset('assets/pictures/oxamat-lisse.png') }}"/>
-                    </div>
-                </div>
-                <div class="paint7">
-                    <h2>Peinture sur mesure pour votre projet</h2>
-                    <div class="flex7">
-                        <p class="show7">
-                            ✓ Forte opacité.
-                            <br>✓ Belle blancheur.
-                            <br>✓ Pouvoir garnissant élevé.
-                            <br>✓ Excellente applicabilité.
-                            <br>✓ Lessivable pour un entretien facile.
-                            <br> ✓ Redoublable dans la journée.
-                        </p>
-                        <img id="product" src="{{ asset('assets/pictures/ultivelours-evolution.png') }}"/>
-                    </div>
-                </div>
-                <div class="paint8">
-                    <h2>Peinture sur mesure pour votre projet</h2>
-                    <div class="flex8">
-                        <p class="show8">
-                            ✓ Grain fin semi-tendu.
-                            <br>✓ Excellente opacité.
-                            <br>✓ Application sans reprise.
-                            <br>✓ Lessivable.
-                        </p>
-                        <img id="product" src="{{ asset('assets/pictures/victory-satin.png') }}"/>
-                    </div>
-                </div>
-                <div class="paint9">
-                    <h2>Peinture sur mesure pour votre projet</h2>
-                    <div class="flex9">
-                        <p class="show9">
-                            ✓ Existe en NOIR MAT.
-                            <br>✓ Pouvoirs garnissant et opacifiant élevés.
-                            <br>✓ Très bonne protection anticorrosion.
-                            <br>✓ Excellente qualité de finition.
-                            <br>✓ Monoproduit : primaire, intermédiaire et finition.
-                            <br>✓ Rendement élevé.
-                        </p>
-                        <img id="product" src="{{ asset('assets/pictures/sofralac.png') }}"/>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <section>
-        <div class="chiffre">
-              <video autoplay muted loop>
-                <source src="{{ asset('assets/pictures/painting.mp4') }}" type="video/mp4">
-            </video>
-            <div class="chiffres">
-            <h1>Nos chiffres clés</h1>
-                <div class="weave">
-                    <span class='numscroller' style="font-size:25px;" data-min='1' data-max='30' data-delay='5' data-increment='1'>30</span><br/>
-                    <span>Années dans le secteur</span>
-                </div>
-                <div class="weave">
-                    <span>Plus de </span></br>
-                    <span class='numscroller' style="font-size:25px;" data-min='1' data-max='3000' data-delay='0.5' data-increment='1'>3000</span><br><span>références de teintes</span>
-                </div>
-                <div class="weave">
-                    <span>Plus de </span></br>
-                    <span class='numscroller' style="font-size:25px;" data-min='1' data-max='20' data-delay='4' data-increment='1'>20</span><span><br>partenaires</span>
-                </div>
-                <div class="weave">
-                    <span class='numscroller' style="font-size:25px; " data-min='1' data-max='100' data-delay='3' data-increment='1'>100</span><span> %</span><br/>
-                    <span>français</span>
-                </div>
-            </div>
-        </div>
-    </section>
-        <section>
-        <div class="info2">
-            <h1>Notre Engagement</h1>
-            <div class="info3">
-                <div class="ecolabel">
-                    <img src="{{ asset('assets/pictures/environnement.jpg') }}" alt="Icone Environnement"/>
-                </div>
-                <div class="zone-verte">
-                    <img src="{{ asset('assets/pictures/zone-verte.jpg') }}" alt="Icone Zone Verte"/>
-                </div>
-                <div class="zone-bleue">
-                    <img src="{{ asset('assets/pictures/zone-bleue.jpg') }}" alt="Icone Zone bleue"/>
-                </div>
-                <div class="COV">
-                    <img src="{{ asset('assets/pictures/cov.jpg') }}" alt="Icone COV"/>
-                </div>
-                <div class="hygiene">
-                    <img src="{{ asset('assets/pictures/hygiene.jpg') }}" alt="Icone Hygiene"/>
-                </div>
-                <div class="qualite">
-                    <img src="{{ asset('assets/pictures/air-qualite.png') }}" alt="Icone Qualité"/>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="presentation">
-        <div class="parallax">
-            <h1>Nos Atouts</h1>
-            <div class="row mt-75 space-alignment mb-0">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="features dark-bg-shadow font-light">
-                    <h2>Polyvalence</h2>
-                    <img src="{{ asset('assets/pictures/polyvalence.jpg') }}"/>
-                        <p>
-                            Offre une gamme complète
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="features dark-bg-shadow font-light">
-                    <h2>Qualité</h2>
-                        <img src="{{ asset('assets/pictures/qualite.png') }}"/>
-                        <p>
-                            De meilleurs ingrédients pour un meilleur aspect
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="features dark-bg-shadow font-light">
-                    <h2>100% Français</h2>
-                    <img src="{{ asset('assets/pictures/made-in-fr.jpg') }}"/>
-                        <p>Tous nos produits sont fabriqués en France</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="features dark-bg-shadow font-light">
-                    <h2>Ecoute et Analyse</h2>
-                    <img src="{{ asset('assets/pictures/analyse.jpg') }}"/>
-                        <p>
-                            Entendre vos besoins et vos attentes
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="features dark-bg-shadow font-light">
-                    <h2>Expertise</h2>
-                    <img src="{{ asset('assets/pictures/expertise.jpg') }}"/>
-                        <p>
-                            Professionnels venant d’horizons différents, possédant des compétences variées et complémentaires
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="features dark-bg-shadow font-light">
-                    <h2>Accompagnement</h2>
-                    <img src="{{ asset('assets/pictures/accompagnement.jpg') }}"/>
-                        <p>
-                            Les solutions que nous vous proposons sont élaborées avec vous tout au long de notre intervention
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="partners">
-        <h1>Nos partenaires</h1>
-        <div class="partners-logos slider">
-                <div class="slide">
-                <img src="{{ asset('assets/pictures/toupret.jpg') }}" alt="Toupret"/>
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/san-marco.png') }}" alt="San Marco"/>
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/keria2.png') }}" alt="Keria"/>
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/logo-comus.jpg') }}" alt="Comus"/>
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/soframap.png') }}" alt="Soframap"/>
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/linitop.jpg') }}" alt="Linitop"/>
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/domaterra.jpg') }}" alt="Domaterra"/>
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/prestonett.jpg') }}" alt="Prestonett"/>
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/outil-parfait.png') }}" alt="L'outil Parfait"/>
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/flex.png') }}" alt="Flex"/>
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/mirka.png') }}" alt="Mirka"/>
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/bostik.jpg') }}" alt="Bostik"/>
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/montana.png') }}" alt="Montana"/>
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/julien.png') }}" alt="Julien"/>
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/metylan.png') }}" alt="Metylan"/>
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/henkel.png') }}" alt="Henkel"/>
-                </div>
-                <div class="slide">
-                   <img src="{{ asset('assets/pictures/semin.png') }}" alt="Semin"/>
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/sinto.jpg') }}" alt="Sinto"/>
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/zinser.png') }}" alt="Rustoleum"/>
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/dulary.jpg') }}" alt="Dulary"/>
-                </div>
-                   <div class="slide">
-                    <img src="{{ asset('assets/pictures/owatrol.jpg') }}" alt="Owatrol"/>
-                </div>
-                   <div class="slide">
-                    <img src="{{ asset('assets/pictures/euromair.png') }}" alt="Euromair"/>
-                </div>
-                   <div class="slide">
-                    <img src="{{ asset('assets/pictures/fluidemail.png') }}" alt="Fluidemail"/>
-                </div>
-                   <div class="slide">
-                    <img src="{{ asset('assets/pictures/stoppani.jpg') }}" alt="Stoppani"/>
-                </div>
-                   <div class="slide">
-                    <img src="{{ asset('assets/pictures/roulor.jpg') }}" alt="Roulor"/>
-                </div>
-                   <div class="slide">
-                    <img src="{{ asset('assets/pictures/nmc.png') }}" alt="NMC"/>
-                </div>
-                   <div class="slide">
-                    <img src="{{ asset('assets/pictures/rota.png') }}" alt="Rota"/>
-                </div>
-                   <div class="slide">
-                    <img src="{{ asset('assets/pictures/self-deco.jpg') }}" alt="Self Deco"/>
-                </div>
-                   <div class="slide">
-                    <img src="{{ asset('assets/pictures/sofec.png') }}" alt="Sofec"/>
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('assets/pictures/lms.png') }}" alt="La Maison du Sol"/>
-                </div>
-                   <div class="slide">
-                    <img src="{{ asset('assets/pictures/lutece.jpg') }}" alt="Lutèce"/>
-                </div>
-                   <div class="slide">
-                    <img src="{{ asset('assets/pictures/vepro.png') }}" alt="Vepro"/>
-                </div>
-        </div>
-    </section>
-     <section>
-        <div class="info">
-            <div class="contact">
-                <img src="{{ asset('assets/pictures/Contact.gif') }}" alt="Contact"/><br>
-                <p>
-                    Besoin d'aide ?<br>
-                    <a href="#">Contactez-nous</a>
-                </p>
-            </div>
-            <div class="paiement">
-                <img src="{{ asset('assets/pictures/secure.gif') }}" alt="Paiement Sécurisé"/><br>
-                <p>
-                    Paiement 100% sécurisé<br>
-                    <a href="#">Par carte bancaire</a>
-                </p>
-            </div>
-            <div class="port">
-                <img src="{{ asset('assets/pictures/Port.gif') }}" alt="Frais de port offerts"/><br>
-                <p>
-                    Frais de port offerts<br>
-                    <a href="#">Dès 100€ d'achat</a>
-                </p>
-            </div>
-            <div class="livraison">
-                <img src="{{ asset('assets/pictures/Livraison.gif') }}" alt="Livraison rapide"/><br>
-                <p>
-                    Livraison rapide<br>
-                    <a href="#">2 à 5 jours ouvrés</a>
-                </p>
-            </div>
-        </div>
-
+{% block title %}Art et Décor | Accueil
 {% endblock %}
+{% block content %}
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="{{ asset('assets/pictures/salon-1.jpeg') }}" class="maison" alt="maison"/>
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>
+							<span>
+								<strong>
+									<p>
+										Peintures, Décoration Intérieures et Extérieures
+									</p>
+								</strong>
+							</span>
+						</h1>
+						<h1>
+							<span>
+								<strong>
+									<p>Au service des professionnels et des particuliers à la recherche de produits de qualités et de conseils technique</p>
+								</strong>
+							</span>
+						</h1>
+						<a href="{{ path('products') }}" class="discover">Découvrez nos produits</a>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="{{ asset('assets/pictures/nuancier.png') }}" class="fantasia" alt="Polycrom"/>
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>
+							<span>
+								<strong>
+									<p>Plus de 1300 couleurs</p>
+								</strong>
+							</span>
+						</h1>
+						<h1>
+							<span>
+								<strong>
+									<p>Trouvez votre couleur qui vous correspond</p>
+								</strong>
+							</span>
+						</h1>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="{{ asset('assets/pictures/bio-source.png') }}" alt="Peintures biosourcées"/>
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>
+							<span>
+								<strong>
+									<p>Découvrez nos dernières nouveautés !</p>
+								</strong>
+							</span>
+						</h1>
+						<h1>
+							<span>
+								<strong>
+									<p>Peinture à base de résines naturelles</p>
+								</strong>
+							</span>
+						</h1>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="{{ asset('assets/pictures/Ulti.png') }}" alt="Ultimium"/>
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>
+							<span>
+								<strong>
+									<p>PROMO! 3 fûts achetés, 1 offert</p>
+								</strong>
+							</span>
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+	<section>
+		<div class="entete">
+			<div class="entete1">
+				<div class="entete-1">
+					<small>Intérieur</small>
+					<h2>Découvrez notre gamme Intérieure</h2>
+					<p>
+						Découvrez toutes les peintures vendues par votre grossiste !
+						                        Découvrez notre éventail de produits de peinture intérieure : 
+						                        peinture murale, peinture sol, peinture plafond, mais également de la peinture pour différents matériaux d’intérieur comme le bois, 
+						                        le PVC, le carrelage, la faïence et le métal.
+					</p>
+					<a href="{{ path('products') }}" class="discover1">Découvrez nos produits intérieurs</a>
+				</div>
+				<div class="entete-img">
+					<img src="{{ asset('assets/pictures/intérieur.jpeg') }}" alt="Photo deco"/>
+				</div>
+			</div>
+			<div class="entete2">
+				<div class="entete2-img">
+					<img src="{{ asset('assets/pictures/extérieur.jpeg') }}" alt="Photo deco 2"/>
+				</div>
+				<div class="entete-2">
+					<small>Extérieur</small>
+					<h2>Découvrez notre gamme Extérieure</h2>
+					<p>
+						Nous avons une gamme riche en peinture extérieure afin de vous combler dans la rénovation complète de vos petits et gros œuvres. Peinture pour façade, métaux, 
+						                        peinture spéciale bois extérieur, pour chaque pot de peinture, 
+						                        vous pouvez choisir la couleur que vous souhaitez, la contenance (1L, 4L, 10L, 15L) et la quantité de pot nécessaire.
+						                        Nos kits façade seront parfaitement adéquats pour votre ravalement complet de votre façade, repeindre vos murs extérieurs, votre portail ou vos volets. 
+						                        Et toujours les rouleaux, pinceaux et montures à l'unité.
+					</p>
+					<a href="{{ path('products') }}" class="discover1">Découvrez nos produits extérieurs</a>
+				</div>
+			</div>
+			<div class="entete3">
+				<div class="entete-3">
+					<small>Outillage</small>
+					<h2>Découvrez toute la gamme de matériel et outillage pour les travaux de peintures.</h2>
+					<p>
+						Tout le matériel et l'outillage pour les travaux de peintures sont disponibles : rouleaux de peintures, bâches de protection peintures, brosses et pinceaux de peintures...         
+						                        Le matériel et l'outillage pour les travaux de peintures sont de qualité professionnelle et ont été testés par notre équipe d'experts.
+					</p>
+					<a href="{{ path('products') }}" class="discover1">Découvrez nos produits</a>
+				</div>
+				<div class="entete3-img">
+					<img src="{{ asset('assets/pictures/outillage.jpeg') }}" alt="Photo deco 3"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="categories">
+	<h1>Que désirez vous peindre ?</h1>
+	<p class="title">Trouvez comment procéder et choisissez le produit le plus adéquat pour votre espace et surface.</p>
+	<div class="places">
+		<div class="content">
+			<div class="salle-a-manger">
+				<img src="{{ asset('assets/pictures/salle-a-manger.jpg') }}" alt="Salle a manger"/>
+				<div class="inside">
+					<span>Salle a manger</span>
+				</div>
+			</div>
+			<div class="salon">
+				<img src="{{ asset('assets/pictures/salon.jpg') }}" alt="Salon"/>
+				<div class="inside">
+					<span>Salon</span>
+				</div>
+			</div>
+			<div class="bureau">
+				<img src="{{ asset('assets/pictures/bureau.jpg') }}" alt="Bureau"/>
+				<div class="inside">
+					<span>Bureau</span>
+				</div>
+			</div>
+			<div class="boiseries">
+				<img src="{{ asset('assets/pictures/boiseries.jpg') }}" alt="Boiseries"/>
+				<div class="inside">
+					<span>Boiseries</span>
+				</div>
+			</div>
+			<div class="salle-de-bain">
+				<img src="{{ asset('assets/pictures/salle-de-bain.jpg') }}" alt="Salle de bain"/>
+				<div class="inside">
+					<span>Salle de bain</span>
+				</div>
+			</div>
+			<div class="facade">
+				<img src="{{ asset('assets/pictures/facade.jpeg') }}" alt="Façade"/>
+				<div class="inside">
+					<span>Façade</span>
+				</div>
+			</div>
+			<div class="chambre">
+				<img src="{{ asset('assets/pictures/chambre.jpg') }}" alt="Chambre"/>
+				<div class="inside">
+					<span>Chambre</span>
+				</div>
+			</div>
+			<div class="cuisine">
+				<img src="{{ asset('assets/pictures/cuisine.jpg') }}" alt="Cuisine"/>
+				<div class="inside">
+					<span>Cuisine</span>
+				</div>
+			</div>
+			<div class="fer">
+				<img src="{{ asset('assets/pictures/fer.jpeg') }}" alt="Fer"/>
+				<div class="inside">
+					<span>Fer</span>
+				</div>
+			</div>
+			<div class="sol">
+				<img src="{{ asset('assets/pictures/garage.jpeg') }}" alt="Sol"/>
+				<div class="inside">
+					<span>Sol</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{# <section>
+	<div class="chiffre">
+		<video autoplay muted loop>
+			<source src="{{ asset('assets/pictures/painting.mp4') }}" type="video/mp4">
+		</video>
+		<div class="chiffres">
+			<h1>Nos chiffres clés</h1>
+			<div class="weave">
+				<span class='numscroller' style="font-size:25px;" data-min='1' data-max='30' data-delay='5' data-increment='1'>30</span><br/>
+				<span>Années dans le secteur</span>
+			</div>
+			<div class="weave">
+				<span>Plus de
+				</span>
+			</br>
+			<span class='numscroller' style="font-size:25px;" data-min='1' data-max='3000' data-delay='0.5' data-increment='1'>3000</span><br><span>références de teintes</span>
+		</div>
+		<div class="weave">
+			<span>Plus de
+			</span>
+		</br>
+		<span class='numscroller' style="font-size:25px;" data-min='1' data-max='20' data-delay='4' data-increment='1'>20</span>
+		<span><br>partenaires</span>
+	</div>
+	<div class="weave">
+		<span class='numscroller' style="font-size:25px; " data-min='1' data-max='100' data-delay='3' data-increment='1'>100</span>
+		<span>
+			%</span><br/>
+		<span>français</span>
+	</div>
+</div></div>
+</section> #}
+<section>
+<div class="info2">
+<h1>Notre Engagement</h1>
+<div class="info3">
+	<div class="ecolabel">
+		<img src="{{ asset('assets/pictures/environnement.jpg') }}" alt="Icone Environnement"/>
+	</div>
+	<div class="zone-verte">
+		<img src="{{ asset('assets/pictures/zone-verte.jpg') }}" alt="Icone Zone Verte"/>
+	</div>
+	<div class="zone-bleue">
+		<img src="{{ asset('assets/pictures/zone-bleue.jpg') }}" alt="Icone Zone bleue"/>
+	</div>
+	<div class="COV">
+		<img src="{{ asset('assets/pictures/cov.jpg') }}" alt="Icone COV"/>
+	</div>
+	<div class="hygiene">
+		<img src="{{ asset('assets/pictures/hygiene.jpg') }}" alt="Icone Hygiene"/>
+	</div>
+	<div class="qualite">
+		<img src="{{ asset('assets/pictures/air-qualite.png') }}" alt="Icone Qualité"/>
+	</div>
+</div></div></section><section class="presentation"><div class="parallax">
+<h1>Nos Atouts</h1>
+<div class="row mt-75 space-alignment mb-0">
+	<div class="col-lg-6 col-md-6 col-sm-12">
+		<div class="features dark-bg-shadow font-light">
+			<h2>Polyvalence</h2>
+			<img src="{{ asset('assets/pictures/polyvalence.jpg') }}"/>
+			<p>
+				Offre une gamme complète
+			</p>
+		</div>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-12">
+		<div class="features dark-bg-shadow font-light">
+			<h2>Qualité</h2>
+			<img src="{{ asset('assets/pictures/qualite.png') }}"/>
+			<p>
+				De meilleurs ingrédients pour un meilleur aspect
+			</p>
+		</div>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-12">
+		<div class="features dark-bg-shadow font-light">
+			<h2>100% Français</h2>
+			<img src="{{ asset('assets/pictures/made-in-fr.jpg') }}"/>
+			<p>
+				Tous nos produits sont fabriqués en France
+			</p>
+		</div>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-12">
+		<div class="features dark-bg-shadow font-light">
+			<h2>Ecoute et Analyse</h2>
+			<img src="{{ asset('assets/pictures/analyse.jpg') }}"/>
+			<p>
+				Entendre vos besoins et vos attentes
+			</p>
+		</div>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-12">
+		<div class="features dark-bg-shadow font-light">
+			<h2>Expertise</h2>
+			<img src="{{ asset('assets/pictures/expertise.jpg') }}"/>
+			<p>
+				Professionnels venant d’horizons différents, possédant des compétences variées et complémentaires
+			</p>
+		</div>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-12">
+		<div class="features dark-bg-shadow font-light">
+			<h2>Accompagnement</h2>
+			<img src="{{ asset('assets/pictures/accompagnement.jpg') }}"/>
+			<p>
+				Les solutions que nous vous proposons sont élaborées avec vous tout au long de notre intervention
+			</p>
+		</div>
+	</div>
+</div></div></section><section class="partners"><h1>Nos partenaires</h1><div class="partners-logos slider">
+<div class="slide">
+	<img src="{{ asset('assets/pictures/toupret.jpg') }}" alt="Toupret"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/san-marco.png') }}" alt="San Marco"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/keria2.png') }}" alt="Keria"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/logo-comus.jpg') }}" alt="Comus"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/soframap.png') }}" alt="Soframap"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/linitop.jpg') }}" alt="Linitop"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/domaterra.jpg') }}" alt="Domaterra"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/prestonett.jpg') }}" alt="Prestonett"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/outil-parfait.png') }}" alt="L'outil Parfait"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/flex.png') }}" alt="Flex"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/mirka.png') }}" alt="Mirka"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/bostik.jpg') }}" alt="Bostik"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/montana.png') }}" alt="Montana"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/julien.png') }}" alt="Julien"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/metylan.png') }}" alt="Metylan"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/henkel.png') }}" alt="Henkel"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/semin.png') }}" alt="Semin"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/sinto.jpg') }}" alt="Sinto"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/zinser.png') }}" alt="Rustoleum"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/dulary.jpg') }}" alt="Dulary"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/owatrol.jpg') }}" alt="Owatrol"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/euromair.png') }}" alt="Euromair"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/fluidemail.png') }}" alt="Fluidemail"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/stoppani.jpg') }}" alt="Stoppani"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/roulor.jpg') }}" alt="Roulor"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/nmc.png') }}" alt="NMC"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/rota.png') }}" alt="Rota"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/self-deco.jpg') }}" alt="Self Deco"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/sofec.png') }}" alt="Sofec"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/lms.png') }}" alt="La Maison du Sol"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/lutece.jpg') }}" alt="Lutèce"/>
+</div>
+<div class="slide">
+	<img src="{{ asset('assets/pictures/vepro.png') }}" alt="Vepro"/>
+</div></div></section><section class="services"><h1>Nos services</h1><div class="info">
+<div class="contact">
+	<i class="fas fa-paint-roller fa-5x"></i>
+	<p>Mise à la teinte</p>
+</div>
+<div class="stock">
+	<i class="fas fa-dolly-flatbed fa-5x" style="color: #2d71b6;"></i>
+	<p>Stock</p>
+</div>
+<div class="preco">
+	<img src="{{ asset('assets/pictures/facade.jpg') }}" alt="Facade"/>
+	<p>Diagnostic Façade</p>
+</div>
+<div class="paiement">
+	<img src="{{ asset('assets/pictures/secure.svg') }}" alt="Paiement sécurisé"/>
+	<p>
+		Paiement 100% sécurisé
+	</p>
+	<small>Vous pouvez payer par carte bancaire en toute confiance</small>
+</div>
+<div class="port">
+	<i class="fas fa-truck fa-5x" style="color: #2d71b6;"></i>
+	<p>
+		Frais de port offerts dès 100€ d'achats
+	</p>
+</div>
+<div class="livraison">
+	<img src="{{ asset('assets/pictures/rapide.png') }}" alt="Livraison Rapide"/>
+	<p>
+		Livraison rapide<br>
+	</p>
+	<small>Soyez sûr·e que vos commandes et demandes seront traitées dans les meilleurs délais</small>
+</div></div>{% endblock %}
