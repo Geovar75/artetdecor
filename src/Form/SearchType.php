@@ -29,7 +29,13 @@ class SearchType extends AbstractType{
             'required' => false,
             'class' => Category::class,
             'multiple' => true,
-            'expanded' => true
+            'expanded' => true,
+            'choice_label' => 'name',
+            'choice_attr' => [
+                'Mat' => ['data-color' => 'Red'],
+                'Velours' => ['data-color' => 'Yellow'],
+                'Satin' => ['data-color' => 'Green'],
+            ]
         ])
         ->add('Submit', SubmitType::class, [
             'label' => 'filtrer',

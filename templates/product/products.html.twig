@@ -1,34 +1,56 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Art et Décor | Produits{% endblock %}
+{% block title %}Art et Décor | Produits
+{% endblock %}
 
 {% block content %}
-    <h1 style="margin-top:150px;">Nos Produits</h1>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                {{ form_start(form) }}
-                {{ form_end(form) }}
-            </div>
-            <div class="col-md-9">
-                <div class="grid">
-                    <div class="row">
-                        {% for product in products %}
-                            <div class="product-item text-center" style="width:100%;">
-                                <a href="{{ path('product', { 'slug' : product.slug }) }}">
-                                    <img src="assets/pictures/{{ product.image }}" alt="{{ product.name }}" class="img-fluid" style="max-height:200px; max-width:200px;"/>
-                                    <h4>{{ product.name }}</h4>
-                                    <h4>{{ product.description }}</h4>
-                                    <h5>{{ (product.price / 100)|number_format(2, ',', '') }} € HT</h5>
-                                </a>
-                            </div>
-                        {% endfor %}
-                        <div class="paginator">{{ knp_pagination_render(products) }}</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-{% endblock %}
+	<div class="products">
+		<h1>Nos Produits</h1>
+		<div class="products-search">
+			<div class="col">
+				<div class="tabs">
+					<div class="tab">
+						<input type="radio" id="rd1" name="rd">
+						<label class="tab-label" for="rd1">Item 1</label>
+						<div class="tab-content">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
+						</div>
+					</div>
+					<div class="tab">
+						<input type="radio" id="rd2" name="rd">
+						<label class="tab-label" for="rd2">Item 2</label>
+						<div class="tab-content">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+						</div>
+					</div>
+					<div class="tab">
+						<input type="radio" id="rd3" name="rd">
+						<label for="rd3" class="tab-close">Close others &times;</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="collapse" id="collapseExample">
+			<div class="card">
+				{{ form_label(formProduct.categories, 'Mat') }}
+				{{ form_label(formProduct.categories, 'Velours') }}
+				{{ form_label(formProduct.categories, 'Satin') }}
+				{{ form_label(formProduct.categories, 'Brillant') }}
+			</div>
+		</div>
+		<div class="boucle">
+			{% for product in products %}
+				<div class="product-item text-center" style="width:100%;">
+					<a href="{{ path('product', { 'slug' : product.slug }) }}">
+						<img src="assets/pictures/{{ product.image }}" alt="{{ product.name }}" class="img-fluid" style="max-height:200px; max-width:200px;"/>
+						<h4>{{ product.name }}</h4>
+						<h4>{{ product.description }}</h4>
+						<h5>{{ (product.price / 100)|number_format(2, ',', '') }}
+							€ HT</h5>
+					</a>
+				</div>
+			{% endfor %}
+			<div class="paginator">{{ knp_pagination_render(products) }}</div>
+		</div>
+	</div>
+</div>{% endblock %}

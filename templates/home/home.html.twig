@@ -223,38 +223,51 @@
 	</div>
 </section>
 
-{# <section>
-	<div class="chiffre">
-		<video autoplay muted loop>
-			<source src="{{ asset('assets/pictures/painting.mp4') }}" type="video/mp4">
-		</video>
-		<div class="chiffres">
-			<h1>Nos chiffres clés</h1>
-			<div class="weave">
-				<span class='numscroller' style="font-size:25px;" data-min='1' data-max='30' data-delay='5' data-increment='1'>30</span><br/>
-				<span>Années dans le secteur</span>
-			</div>
-			<div class="weave">
-				<span>Plus de
-				</span>
-			</br>
-			<span class='numscroller' style="font-size:25px;" data-min='1' data-max='3000' data-delay='0.5' data-increment='1'>3000</span><br><span>références de teintes</span>
+<div class="data">
+		<div class="col-md-4" >
+			<h1>Plus de </h1>
+						<span
+						data-purecounter-duration="3.5"
+						data-purecounter-end="30"
+						class="purecounter"
+						>0</span
+					>
+		<h2>années dans le secteur</h2>
+		<i class="fa-solid fa-cake-candles fa-4x"></i>
+		</div> 
+		<div class="col-md-4">
+			<h1>Plus de </h1>
+						<span
+						data-purecounter-duration="3.5"
+						data-purecounter-end="1300"
+						class="purecounter"
+						>0</span
+					>
+		<h3>références de teintes</h3>
+		<i class="fa-solid fa-swatchbook fa-4x"></i>
 		</div>
-		<div class="weave">
-			<span>Plus de
-			</span>
-		</br>
-		<span class='numscroller' style="font-size:25px;" data-min='1' data-max='20' data-delay='4' data-increment='1'>20</span>
-		<span><br>partenaires</span>
-	</div>
-	<div class="weave">
-		<span class='numscroller' style="font-size:25px; " data-min='1' data-max='100' data-delay='3' data-increment='1'>100</span>
-		<span>
-			%</span><br/>
-		<span>français</span>
-	</div>
-</div></div>
-</section> #}
+		<div class="col-md-4">
+			<h1>Plus de </h1>
+								<span
+						data-purecounter-duration="3.5"
+						data-purecounter-end="20"
+						class="purecounter"
+						>0</span>
+		<h3>partenaires</h3>
+		<br><br>
+		<i class="fa-solid fa-handshake fa-4x"></i>
+		</div>
+			<div class="col-md-4">
+			<br><br>
+								<span
+						data-purecounter-duration="3.5"
+						data-purecounter-end="100"
+						class="purecounter"
+						>0</span> <span>% <br><span>français</span></span>
+						<br><br>
+		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAAX0lEQVRoge3ZwQnAMAwEwXNI/y0nPQSBjjDzt9Fi/5QAsOAkebaHmHBtDzDlHrzrfDw38iN+8yJC2ghpI6SNkDZC2ghpI6SNkDZC2ghpI6SNkDZC2ghpI6SNjRUAJHkBNVoDR5n8ImwAAAAASUVORK5CYII="/>
+		</div>
+</div>
 <section>
 <div class="info2">
 <h1>Notre Engagement</h1>
@@ -430,36 +443,38 @@
 </div>
 <div class="slide">
 	<img src="{{ asset('assets/pictures/vepro.png') }}" alt="Vepro"/>
-</div></div></section><section class="services"><h1>Nos services</h1><div class="info">
+</div></div></section>
+
+<section class="services">
+<h1>Nos services</h1>
+<div class="info">
 <div class="contact">
 	<i class="fas fa-paint-roller fa-5x"></i>
 	<p>Mise à la teinte</p>
 </div>
 <div class="stock">
-	<i class="fas fa-dolly-flatbed fa-5x" style="color: #2d71b6;"></i>
+	<img src="{{ asset('assets/pictures/stock.png') }}" alt="stock"/>
 	<p>Stock</p>
 </div>
 <div class="preco">
-	<img src="{{ asset('assets/pictures/facade.jpg') }}" alt="Facade"/>
+	<img src="{{ asset('assets/pictures/maison.png') }}" alt="Facade"/>
 	<p>Diagnostic Façade</p>
 </div>
 <div class="paiement">
-	<img src="{{ asset('assets/pictures/secure.svg') }}" alt="Paiement sécurisé"/>
+	<img src="{{ asset('assets/pictures/payment.png') }}" alt="Paiement sécurisé"/>
 	<p>
 		Paiement 100% sécurisé
 	</p>
-	<small>Vous pouvez payer par carte bancaire en toute confiance</small>
 </div>
 <div class="port">
-	<i class="fas fa-truck fa-5x" style="color: #2d71b6;"></i>
+	<img src="{{ asset('assets/pictures/livraison-gratuite.png') }}" alt="Port"/>
 	<p>
 		Frais de port offerts dès 100€ d'achats
 	</p>
 </div>
 <div class="livraison">
-	<img src="{{ asset('assets/pictures/rapide.png') }}" alt="Livraison Rapide"/>
+	<img src="{{ asset('assets/pictures/camion.png') }}" alt="Livraison Rapide"/>
 	<p>
 		Livraison rapide<br>
 	</p>
-	<small>Soyez sûr·e que vos commandes et demandes seront traitées dans les meilleurs délais</small>
 </div></div>{% endblock %}

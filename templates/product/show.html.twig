@@ -5,7 +5,8 @@
 {% block content %}
     <div class="row" style="margin-top:200px; display:flex; flex-direction:column; justify-content:center;">
         <div class="col-md-5">
-            <img src="assets/pictures/{{ product.image }}" alt="{{ product.name }}" class="img-fluid" style="max-height:200px; max-width:200px;"/>
+        {{ dump(product)}}
+            <img src="assets/produts/assets/pictures/{{ product.image }}" alt="{{ product.name }}" class="img-fluid" style="max-height:200px; max-width:200px;"/>
         </div>
         <div class="col-md-7 my-auto">
             <h3>{{ product.name }}</h3>

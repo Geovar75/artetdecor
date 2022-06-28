@@ -1,16 +1,23 @@
+
 $(document).ready(function () {
-  $(".counter").countUp({
-    time: 5000,
-    delay: 20,
+  new PureCounter();
+  new PureCounter({
+      filesizing: true,
+      selector: ".filesizecount",
+      pulse: 2,
   });
 
   $(".partners-logos").slick({
-    slidesToShow: 6,
-    slidesToScroll: 1,
+    variableWidth: true,
     autoplay: true,
-    autoplaySpeed: 300,
+    autoplaySpeed: 0,
+    speed: 700,
+    cssEase: 'linear',
+    slidesToShow: 1,
+    slidesToScroll: 1,
     arrows: false,
     dots: false,
+    infinite: true,
     pauseOnHover: false,
     responsive: [
       {
@@ -28,6 +35,8 @@ $(document).ready(function () {
     ],
   });
 
+  let name = $(".salle-a-manger, .bureau, .boiseries, .salon, .salle-de-bain, .facade, .chambre, .cuisine, .fer, .sol").val();
+
   $(".salle-a-manger, .bureau, .boiseries, .salon, .salle-de-bain, .facade, .chambre, .cuisine, .fer, .sol").hover(
     function () {
       $(".inside span", this).slideToggle("fast");
@@ -36,6 +45,13 @@ $(document).ready(function () {
       $(".inside span", this).slideToggle("fast");
     }
   );
-
   
 });
+
+$('.button-collapse').sideNav({
+  menuWidth: 300, // Default is 300
+  edge: 'left', // Choose the horizontal origin
+  closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+  draggable: true // Choose whether you can drag to open on touch screens,
+}
+); 
