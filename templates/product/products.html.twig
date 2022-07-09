@@ -1,0 +1,227 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Art et Décor | Produits
+{% endblock %}
+
+{% block content %}
+	<h1 style="margin-top:150px; text-align: center;">Nos Produits</h1>
+	<div class="products">
+		{# <div class="products-search">
+					{{ form(formProduct.string) }}
+					<a class="block">
+						<h2>Aspect</h2>
+						<div class="chevron">
+							<i class="fa-solid fa-chevron-down"></i>
+						</div>
+					</a>
+					<div class="hidden">
+						{{ form_row(formProduct.categories.1, {
+							'label_attr': {'class': 'test'}
+						}) }}
+						{{ form_row(formProduct.categories.2) }}
+						{{ form_row(formProduct.categories.3) }}
+						{{ form_row(formProduct.categories.4) }}
+					</div>
+					<a class="block">
+						<h2>Familles</h2>
+						<div class="chevron">
+							<i class="fa-solid fa-chevron-down"></i>
+						</div>
+					</a>
+					<div class="hidden">
+						{{ form_row(formProduct.categories.8) }}
+						{{ form_row(formProduct.categories.7) }}
+						{{ form_row(formProduct.categories.24) }}
+						{{ form_row(formProduct.categories.9) }}
+						{{ form_row(formProduct.categories.10) }}
+						{{ form_row(formProduct.categories.26) }}
+						{{ form_row(formProduct.categories.6) }}
+						{{ form_row(formProduct.categories.5) }}
+					</div>
+					<a class="block">
+						<h2>Phase</h2>
+						<div class="chevron">
+							<i class="fa-solid fa-chevron-down"></i>
+						</div>
+					</a>
+					<div class="hidden">
+						{{ form_row(formProduct.categories.18) }}
+						{{ form_row(formProduct.categories.19) }}
+					</div>			
+					<a class="block">
+						<h2>Résines</h2>
+						<div class="chevron">
+							<i class="fa-solid fa-chevron-down"></i>
+						</div>
+					</a>
+					<div class="hidden">
+						{{ form_row(formProduct.categories.12) }}
+						{{ form_row(formProduct.categories.13) }}
+						{{ form_row(formProduct.categories.14) }}
+						{{ form_row(formProduct.categories.15) }}
+						{{ form_row(formProduct.categories.16) }}
+						{{ form_row(formProduct.categories.17) }}
+						{{ form_row(formProduct.categories.25) }}
+					</div>
+					<a class="block">
+						<h2>Classe</h2>
+						<div class="chevron">
+							<i class="fa-solid fa-chevron-down"></i>
+						</div>
+					</a>
+					<div class="hidden">
+						{{ form_row(formProduct.categories.20) }}
+						{{ form_row(formProduct.categories.21) }}
+					</div>
+					{{ form_widget(formProduct.submit) }}
+				</div> #}
+
+		<form id="filters">
+		{{ form_widget(formProduct.string) }}
+		{# <form id="filters">
+			{% for categorie in categories %}
+				<p>
+					<input type="checkbox" name="categories[]" id="cat{{categorie.id}}" value="{{categorie.id}}"/>
+					<label for="cat{{categorie.id}}">{{categorie.name}}</label>
+				</p>
+			{% endfor %}
+		</form> #}
+		<ul class="accordion-menu">
+			<li>
+				<div class="dropdownlink">
+					<i class="fa fa-road" aria-hidden="true"></i>
+					Aspect
+					<i class="fa fa-chevron-down" aria-hidden="true"></i>
+				</div>
+				<ul class="submenuItems">
+					<li>
+						<a>{{ form_row(formProduct.categories.1, {
+							'label_attr': {'class': 'test'}
+							}) }}
+						</a>
+					</li>
+					<li>
+						<a>{{ form_row(formProduct.categories.2) }}</a>
+					</li>
+					<li>
+						<a>{{ form_row(formProduct.categories.3) }}</a>
+					</li>
+					<li>
+						<a>{{ form_row(formProduct.categories.4) }}</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="dropdownlink">
+					<i class="fa fa-paper-plane" aria-hidden="true"></i>
+					Familles
+					<i class="fa fa-chevron-down" aria-hidden="true"></i>
+				</div>
+				<ul class="submenuItems">
+					<li>
+						<a>{{ form_row(formProduct.categories.8) }}</a>
+					</li>
+					<li>
+						<a>{{ form_row(formProduct.categories.7) }}</a>
+					</li>
+					<li>
+						<a>{{ form_row(formProduct.categories.24) }}</a>
+					</li>
+					<li>
+						<a>{{ form_row(formProduct.categories.9) }}</a>
+					</li>
+					<li>
+						<a>{{ form_row(formProduct.categories.10) }}</a>
+					</li>
+					<li>
+						<a>{{ form_row(formProduct.categories.26) }}</a>
+					</li>
+					<li>
+						<a>{{ form_row(formProduct.categories.6) }}</a>
+					</li>
+					<li>
+						<a>{{ form_row(formProduct.categories.5) }}</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="dropdownlink">
+					<i class="fa fa-quote-left" aria-hidden="true"></i>
+					Phase
+					<i class="fa fa-chevron-down" aria-hidden="true"></i>
+				</div>
+				<ul class="submenuItems">
+					<li>
+						<a>{{ form_row(formProduct.categories.18) }}</a>
+					</li>
+					<li>
+						<a>{{ form_row(formProduct.categories.19) }}</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="dropdownlink">
+					<i class="fa fa-motorcycle" aria-hidden="true"></i>
+					Résines
+					<i class="fa fa-chevron-down" aria-hidden="true"></i>
+				</div>
+				<ul class="submenuItems">
+					<li>
+						<a>{{ form_row(formProduct.categories.12) }}</a>
+					</li>
+					<li>
+						<a>{{ form_row(formProduct.categories.13) }}</a>
+					</li>
+					<li>
+						<a>{{ form_row(formProduct.categories.14) }}</a>
+					</li>
+					<li>
+						<a>{{ form_row(formProduct.categories.15) }}</a>
+					</li>
+					<li>
+						<a>{{ form_row(formProduct.categories.16) }}</a>
+					</li>
+					<li>
+						<a>{{ form_row(formProduct.categories.17) }}</a>
+					</li>
+					<li>
+						<a>{{ form_row(formProduct.categories.25) }}</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="dropdownlink">
+					<i class="fa fa-motorcycle" aria-hidden="true"></i>
+					Classe
+					<i class="fa fa-chevron-down" aria-hidden="true"></i>
+				</div>
+				<ul class="submenuItems">
+					<li>
+						<a>{{ form_row(formProduct.categories.20) }}</a>
+					</li>
+					<li>
+						<a>{{ form_row(formProduct.categories.21) }}</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		{{ form_widget(formProduct.submit) }}
+		</form>
+
+
+		<div class="boucle">
+			{% for product in products %}
+				<div class="product-item text-center" style="width:100%;">
+					<a href="{{ path('product', { 'slug' : product.slug }) }}">
+						<img src="assets/pictures/{{ product.image }}" alt="{{ product.name }}" class="img-fluid" style="max-height:200px; max-width:200px;"/>
+						<h4>{{ product.name }}</h4>
+						<h4>{{ product.description }}</h4>
+						<h5>{{ (product.price / 100)|number_format(2, ',', '') }}€ HT</h5>
+					</a>
+				</div>
+			{% endfor %}
+			<div class="paginator">{{ knp_pagination_render(products) }}</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

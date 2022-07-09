@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Art et Décor | Ajouter une adresse{% endblock %}
+
+{% block content %}
+<br>
+<br>
+    <h1 style="margin-top:50px;">Ajouter une adresse</h1>
+    <br>
+    <p>Bonjour {{ app.user.firstname }}</p>
+    <br><br>
+    {{ form_start(form) }}
+        {{ form_row(form.firstname, {'label' : 'Entrez votre prénom', 'attr' : {'placeholder' : 'Prénom'}}) }}
+        {{ form_row(form.lastname, {'label' : 'Entrez votre nom', 'attr' : {'placeholder' : 'Nom de famille'}}) }}
+        {{ form_row(form.company, {'label' : 'Entrez le nom de votre entreprise', 'attr' : {'placeholder' : 'Nom d\'entreprise (facultatif)'}}) }}
+        {{ form_row(form.address, {'label' : 'Entrez votre adresse', 'attr' : {'placeholder' : 'Adresse'}}) }}
+        {{ form_row(form.addressPlus, {'label' : 'Informations complémentaires', 'attr' : {'placeholder' : 'Bâtiment, Résidence etc...'}}) }}
+        {{ form_row(form.postalCode, {'label' : 'Entrez votre Code Postal', 'attr' : {'placeholder' : 'Code Postal'}}) }}
+        {{ form_row(form.city, {'label' : 'Ville', 'attr' : {'placeholder' : 'Nom de la Ville'}}) }}
+        {{ form_row(form.country, {'label' : 'Pays/Région', 'attr' : {'placeholder' : 'FRANCE'}}) }}
+        {{ form_row(form.phone, {'label' : 'Entrez votre numéro de téléphone', 'attr' : {'placeholder' : 'Numéro de téléphone'}}) }}
+        <form>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Adresse Email</label>
+                <input type="email" class="form-control" placeholder="{{ app.user.email }}" disabled="true"></input>
+        </form>
+        <button type="submit" class="btn btn-success" id="address-btn">Inscription</button>
+    {{ form_end(form) }}
+
+    <a href="{{ path('account') }}">Retour</a>
+{% endblock %}

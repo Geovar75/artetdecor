@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Art et Décor | Mes adresses{% endblock %}
+
+{% block content %}
+<br>
+<br>
+    <h1 style="margin-top:50px;">Mon adresse de facturation</h1>
+    <br>
+    <p>Bonjour {{ app.user.firstname }}</p>
+    <br><br>
+    {% if app.user.addresses|length == 0 %}
+        <p class="text-center">Vous n’avez pas encore défini ce type d’adresse.</p>
+    {% else %}
+        {% for address in app.user.addresses %}
+            {{ address.address }}<br>
+            {{ address.addressPlus }}<br>
+            {{ address.postalCode }}<br>
+            {{ address.city }}<br>
+            {{ address.country }}<br>
+        {% endfor %}
+    {% endif %}
+
+    <h1 style="margin-top:50px;">Mon adresse de livraison</h1>
+    <br>
+    <br><br>
+    {% if app.user.addresses|length == 0 %}
+        <p class="text-center">Vous n’avez pas encore défini ce type d’adresse.</p>
+    {% else %}
+        {% for address in app.user.addresses %}
+            {{ address.address }}<br>
+            {{ address.addressPlus }}<br>
+            {{ address.postalCode }}<br>
+            {{ address.city }}<br>
+            {{ address.country }}<br>
+        {% endfor %}
+    {% endif %}
+
+    <a href="{{ path('account') }}">Retour</a>
+    <button class="btn btn-info"><a href="{{ path('account_address_add') }}">Ajouter une adresse</a></button>
+
+{% endblock %}
