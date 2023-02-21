@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Art et Décor | Contact{% endblock %}
+
+{% block content %}
+    <h2 style="margin-top:100px;">Nous contacter</h2>
+    {% for message in app.flashes('notice') %}
+        <div class="alert alert-info" style='margin-top:150px;'>{{ message }}</div>
+    {% endfor %}
+    <div class="row">
+        <div class="col-md-8">
+            {{ form_start(form) }}
+                <button type="submit" class="btn btn-success">Envoyer</button>
+            {{ form_end(form) }}
+        </div>
+        <div class="col-md-4">
+            Adresse, TEL etc..
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,41 @@
+# config/packages/acseo_typesense.yml
+acseo_typesense:
+    # Typesense host settings
+    typesense:
+        url: '%env(resolve:TYPESENSE_URL)%'
+        key: '%env(resolve:TYPESENSE_KEY)%'
+    # Collection settings
+    collections:
+        products:                                     # Typesense collection name
+            entity: 'App\Entity\Product'              # Doctrine Entity class
+            fields: 
+                id:                                # Entity attribute name
+                    name: id                # Typesense attribute name
+                    type: primary                  # Attribute type
+                sortable_id:
+                    entity_attribute: id
+                    name: sortable_id
+                    type: int32
+                name: 
+                    name: name
+                    type: string
+                slug:
+                     name: slug
+                     type: string                  # Object conversion with __toString()
+                image:
+                    name : image          # equivalent of $book->getAuthor()->getCountry()
+                    type: string
+                subtitles:
+                    name : subtitles
+                    type: string               # Convert ArrayCollection to array of strings
+                description: 
+                    name : description
+                    type: string
+                price:
+                    name: price
+                    type: float
+                category:
+                    name: category
+                    type: string
+                    entity_attribute: product
+            default_sorting_field: sortable_id    # Default sorting field. Must be primary, int32 or float
