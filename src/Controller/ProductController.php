@@ -54,7 +54,9 @@ class ProductController extends AbstractController
     public function show($slug): Response
     {
 
-        $product = $this->entityManager->getRepository(Product::class)->findOneBySlug($slug);
+        // $product = $this->entityManager->getRepository(Product::class)->findOneBySlug($slug);
+        $product = $this->entityManager->getRepository(Product::class)->findOneBy(['slug' => $slug]);
+
 
         if(!$product){
             return $this->redirectToRoute('products');
