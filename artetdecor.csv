@@ -1,0 +1,663 @@
+"id","user_id","firstname","lastname","address","address_plus","postal_code","company","city","country","phone"
+"id","name","description","price"
+"1","Chronopost","Livré en 24h!","2000"
+"2","Colissimo","Livré en 72h!","1500"
+"id","name"
+"1","Mat"
+"2","Velours"
+"3","Satin"
+"4","Brillant"
+"5","Laques"
+"6","Bio"
+"7","Extérieur"
+"8","Intérieur"
+"9","Bois"
+"10","Fer"
+"11","Lasures"
+"12","Acrylique"
+"13","Siloxane"
+"14","Polyuréthane"
+"15","Glycéro"
+"16","Pliolite®"
+"17","Alkyde"
+"18","Eau"
+"19","Solvant"
+"20","D2"
+"21","D3"
+"22","Impression"
+"23","Sous-couche"
+"24","Primaire"
+"25","Uréthane"
+"26","Sol"
+"version","executed_at","execution_time"
+"DoctrineMigrations\Version20211114104111","2021-11-14 10:41:17","235"
+"id","user_id","created_at","carrier_name","carrier_price","delivery","reference","stripe_session_id","state"
+"id","my_order_id","product","quantity","price","total"
+"id","name","slug","image","subtitles","description","price"
+"1","Aircryl","aircryl","6ecf910f735667e6dbe2086c38a7bde5e5315e91.png","Peinture mate à base de résine acrylique","Application mécanisée ou rouleau
+Spécialement destinée aux grands chantiers
+Redoublable dans la journée.
+Odeur faible
+Résiste au “flash-rust”","8000"
+"2","Aktu Mat","aktu-mat","b6611b70f6b834b8d53c0697c1cbc2e401a12e56.png","Peinture mate aux résines acryliques et alkydes en phase aqueuse","Garnissant et opacité élevés.
+Temps ouvert optimisé.
+Grande blancheur.
+Remise en service rapide des locaux.
+Très faible empreinte environnementale.
+Label Excell Plus.","13000"
+"3","Aktu Mat-Velouté","aktu-mat-veloute","e5df2255a6d4d3ce5422bd568a3ef34db1060720.png","Peinture mate-veloutée aux résines acryliques et alkydes en phase aqueuse","Garnissant et opacité élevés.
+Grande blancheur.
+Entretien aisé, lavable.
+Temps ouvert optimisé.
+Très faible empreinte environnementale.
+Label Excell Plus.","15000"
+"4","Aktu Velours","aktu-velours","4ea14037cc9bf957dca13abc71411f5cb558730f.png","Peinture veloutée aux résines acryliques et alkydes en phase aqueuse","Garnissant et opacité élevés.
+Temps ouvert optimisé.
+Entretien aisé, lavable.
+Excellente finition pour toiles de verre.
+Très faible empreinte environnementale.
+Label Excell Plus.","16000"
+"5","Bio Source Mat","bio-source-mat","1ff7d42908d65404e0b7601be0e4469a9ac8f91c.png","Produit de peinture en phase aqueuse d’aspect mat, à base de résine acrylique biosourcée","Forte opacité.
+Belle blancheur.
+Allie environnement et performances.
+Excellente résistance au nettoyage.
+Très faible empreinte carbone.
+Idéale pour les chantiers HQE®.
+Label Excell Plus.","11500"
+"6","Bio Source Velours","bio-source-velours","03f283640c5d30e3ebb905f7854879bdaa20d4a3.png","Produit de peinture en phase aqueuse d’aspect velouté, à base de résine acrylique biosourcée","Forte opacité.
+Belle blancheur.
+Allie environnement et performances.
+Excellente résistance au nettoyage.
+Très faible empreinte carbone.
+Idéale pour les chantiers HQE®.
+Label Excell Plus.","12000"
+"7","Boiséa Mat","boisea-mat","731dd1c087a5553538aff90a3b595ba945732d27.png","Lasure longue durée avec filtre anti U.V. aux résines alkydes en phase solvant","Durabilité élevée.
+Hydrofuge et microporeuse.
+Belle finition mettant en valeur le veinage du bois.
+Application aisée.
+Protection renforcée du film.","18000"
+"8","Boiséa Satin","boisea-satin","9594107b343b9837c403a3506fa7d61bbcd068f5.png","Lasure longue durée avec filtre anti U.V. aux résines alkydes en phase solvant","Durabilité élevée.
+Hydrofuge et microporeuse.
+Belle finition mettant en valeur le veinage du bois.
+Application aisée.
+Protection renforcée du film.","19500"
+"9","Boiséa Hydrotec","boisea-hydrotec","1c09e853853c38d3788d24181230befa873b66cf.png","Lasure en phase aqueuse satinée avec filtre anti-U.V. pour la protection et la décoration du bois","Excellente durabilité, protection hydrofuge.
+Grande souplesse du film.
+Mise en valeur du veinage et de la structure du bois.
+Odeur faible, confort d’application exceptionnel.
+Microporeuse et fongistatique.","20000"
+"10","Excel Brillant","excel-brillant","cbf5eea7934b86469710b4e0af5784a08e0fdd91.png","Peinture-laque brillante acrylique et polyuréthane en phase aqueuse","Finition de très grande qualité.
+Très bonne résistance aux chocs et aux rayures.
+Film tendu, opaque et garnissant.
+Grande profondeur de brillant.
+Lessivable.","25000"
+"11","Excel Mat","excel-mat","621cbe560cb3ea8af493825e88ec73d0f22e7f8a.png","Peinture-laque mate acrylique et polyuréthane en phase aqueuse","Bel aspect lisse et tendu.
+Film dur et résistant.
+Temps ouvert et optimisé.
+Entretien aisé, lavable.
+Rendement exceptionnel.","18000"
+"12","Excel Satin","excel-satin","a0665c7106f2aa70fa386186dde1e50eb2046861.png","Peinture-laque satinée acrylique et polyuréthane en phase aqueuse","Finition de très grande qualité.
+Film tendu, opaque et garnissant.
+Excellente glisse.
+Très bonne résistance mécanique.
+Lessivable.","20000"
+"13","Excel Velours","excel-velours","09d05b93a34b0f2f139a14011b4ee74a2f6febc4.png","Peinture-laque veloutée acrylique et polyuréthane en phase aqueuse","Excellent tendu.
+Film opaque et garnissant.
+Lavable.
+Bon temps ouvert.
+Odeur faible.
+Faible teneur en COV.","19000"
+"14","Exterlith Losange","exterlith-losange","d5dec2af43ddf89026c9809e61efb0fa69bfe7ed.png","Peinture microporeuse de façades en phase solvant à base de résines PLIOLITE®","Excellente adhérence.
+Forte microporosité.
+Bonne durabilité.
+Pouvoir garnissant et opacifiant élevé.
+Biostatique.","15000"
+"15","Façacryl Hydro","facacryl-hydro","86bfe2c835c540a08f152a9caa6b1cdb10d9fe99.png","Peinture acrylique en phase aqueuse de technologie EBS formulée avec la résine Hydro PLIOLITE®","Forte adhérence.
+Microporosité élevée.
+Monoproduit : impression et finition.
+Grand confort d’application.
+Biostatique.","13000"
+"16","Fongimur","fongimur","51cd42cce93339e6e9112a85c6a62401332d70f4.png","Solution biocide décontaminante prête à l’emploi","Elimine lichens, champignons et algues.
+Action préventive.
+Prêt à l’emploi, sans rinçage.
+Pour façades, toitures, dallages et bardages.","20000"
+"17","GT Acryl Façade","gt-acryl-facade","2897842ac1e3eae9e49c5324dfe6c90a8207eeb3.png","Produit en phase aqueuse, d’aspect mat, à base de copolymères acryliques","Opacifiante et garnissante.
+Séchage rapide.
+Grand confort d’application.
+Résistante aux U.V. et aux intempéries.
+Biostatique.","9000"
+"18","GT Acryl Mat","gt-acryl-mat","c5b3b8f5c5b81dbbc2b72cc378e46daf578eb502.png","Produit en phase aqueuse, d’aspect mat, à base de copolymères acryliques","Opacifiante et garnissante.
+Application manuelle ou mécanisée.
+Facilité d’emploi.
+Résistance au “flash-rust”.
+Très mat.
+Séchage rapide.
+Faible teneur en COV.","8500"
+"19","GT Acryl Satin","gt-acryl-satin","f8b1e6e1d68f4186e41786ba137d6d3bd654b378.png","Produit en phase aqueuse, d’aspect satiné, à base de copolymères acryliques","Garnissante et opacifiante.
+Lavable.
+Facilité d’emploi.
+Séchage rapide.
+Adaptée aux pièces humides.
+Idéale pour les toiles de verre.","9000"
+"20","GT Acryl Velours","gt-acryl-velours","95bce3afc6f5172d0dbcf891d79fcdaed1a66de7.png","Produit en phase aqueuse, d’aspect velouté, à base de copolymères acryliques","Garnissante et opacifiante.
+Facilité d’emploi.
+Entretien aisé.
+Séchage rapide.
+Idéale pour les toiles de verre.","9500"
+"21","GT Prim","gt-prim","1ad37b7c864666774634314362df3076dd07ad7c.png","Produit en phase aqueuse, à base de copolymères acryliques","Application manuelle ou mécanisée.
+Odeur faible.
+Bonne blancheur.
+Résistance au “flash-rust”.
+Faible teneur en COV.","8500"
+"22","GT Silox D2","gt-silox-d2","4a85656e65404439f914ecb525f1c3a44b1447d3.png","Produit en phase aqueuse, d’aspect mat, à base de copolymères acryliques et siloxanes","Aspect mat profond.
+Opacifiante et garnissante.
+Polyvalence d’emploi.
+Grand confort d’application.
+Faible teneur en COV.
+Résistance aux U.V. et aux intempéries.
+Biostatique.","10500"
+"23","GT Silox D3","gt-silox-d3","10f246d4adaf54647c57fbf66a2d1caa593f47e1.png","Produit en phase aqueuse, d’aspect mat, pour protection de surface du béton, ou de la maçonnerie, composé  de copolymères acryliques et siloxanes","Bon garnissant.
+Masque la faïençage.
+Bonne résistance aux U.V. et aux intempéries.
+Entretien décoratif des RPE, RSI et des fonds structurés.
+Biostatique.","12000"
+"24","Galvaplast 2000","galvaplast-2000","18a6670cbc6a5a10dee535e6ded655a6bd67b423.png","Primaire antirouille d’accrochage en extérieur et intérieur pour métaux non ferreux (zinc, aluminium, acier galvanisé), métaux ferreux, PVC, plastiques et supports à fonds bloqués.","Excellente adhérence.
+Multi-supports.
+Isolant.
+Séchage rapide.
+Antirouille.","25000"
+"25","Glycoprim'R","glycoprimr","d3d9aadc27eafc81d2edb565f1c2cca47474ab33.png","Impression universelle à séchage rapide et à odeur faible en phase solvant","Alkyde-uréthane insaponifiable.
+Opacifiante.
+Aisément ponçable.
+Recouvrable après 3 heures.","11000"
+"26","Glycosoie","glycosoie","1b69afbb15e2998a7d07ef8c9b517e9cecd705df.png","Peinture satinée aux résines alkydes en phase solvant","Excellent garnissant.
+Forte opacité.
+Satiné doux finement poché.
+Entretien facile.
+Parfaitement adaptée aux menuiseries.","14000"
+"27","Glycovelours","glycovelours","84146bc30b4c0afcdd22c4b7e304f3eae3c6605a.png","Peinture veloutée alkyde en phase solvant","Excellent garnissant.
+Très bonne opacité.
+Lavable.
+Entretien facile.
+Aspect finement poché.","15000"
+"28","Helveplus","helveplus","2b41c51351b8825b9d96bbd98f4eef691fd66f9a.png","Peinture blanche mate polyvalente, sans tension et isolante, aux résines acryliques en phase solvant","Excellent pouvoir isolant des taches.
+Grande blancheur, non jaunissant.
+Sans tension et sans reprise.
+Excellente opacité, odeur faible.
+Grande polyvalence d’emploi.","16000"
+"29","Helveprim","helveprim","b65c04db2260f9fd71c073c00f0f715a1a14f8be.png","Impression isolante et adhérente cationique en phase aqueuse","Excellente isolation des taches.
+Forte adhérence.
+Bonne opacité.
+Multi-supports.
+Compatible avec tout type de finition.
+Label Excell Zone Verte.","15000"
+"30","Hygio'Air Mat","hygioair-mat","dfaae38c5b37f32e44e2514a9da078b344a4aae2.png","Peinture purificatrice d’air intérieur en phase aqueuse, anti-formaldéhyde d’aspect mat","Action dépolluante : capte et détruit les particules de formaldéhyde.
+Excellente opacité.
+Garnissante.
+Recommandée pour les chantiers HQE® et les ERP.
+Remise en service des locaux dans la journée.","18000"
+"31","Hygio'Air Velours","hygioair-velours","f3e97d2cf26640ba2db2b83bbf37d850fa22b9db.png","Peinture purificatrice d’air intérieur en phase aqueuse, anti-formaldéhyde, d’aspect satiné-velouté","Action Dépolluante : capte et détruit les particules de formaldéhyde.
+Opacifiante et garnissante.
+Lessivable.
+Recommandée pour les chantiers HQE® et les ERP.
+Remise en service des locaux dans la journée.","28000"
+"32","Hygio Pur","hygio-pur","053e5443497bd26072929204562724697fc959fe.png","Peinture antibactérienne et anti-SARS-coV-2, d’aspect satiné-velouté","Antimicrobienne (E.Coli, MRSA et 7 autres souches).
+Anti-SARS-CoV-2 (responsable de la COVID-19)
+Excellente lavabilité.
+Garnissante et opacifiante.
+Remise en service des locaux dans la journée.
+Recommandée pour les établissements de santé.","28000"
+"33","Muralith","muralith","8a8a4d9f2dc87ee6369adc7db5200607b09746ff.png","Peinture microporeuse de façades à base de résine PLIOLITE® en phase solvant","Forte opacité.
+Excellente adhérence.
+Microporosité élevée.
+Application aisée.
+Biostatique.","10500"
+"34","Murnyl Plus","murnyl-plus","79f7348ba09e6c9af3486a951a3615414a996cc4.png","Peinture acrylique mate en phase aqueuse pour travaux intérieurs","Opacifiante.
+Application aisée.
+Pouvoir garnissant élevé.
+Grande polyvalence.","14000"
+"35","Oxamat Lisse","oxamat-lisse","6468d0099b9ce80a42c21c01c926fb98fc12a0e7.png","Peinture de façade aux résines acryliques et siloxanes en phase aqueuse","Aspect mat minéral.
+Microporosité élevée.
+Effet perlant hydrophobe.
+Très bonne résistance à la salissure.
+Biostatique.","15000"
+"36","Perfoprim'S","perfoprims","9ec9f2086918d3dce635383b641c7da9b81f4afa.png","Impression multi-supports aux résines alkydes en phase solvant","Durcissante et régulatrice d’absorption.
+Bonne opacité.
+Grande polyvalence d’emploi.
+Unifie les fonds hétérogènes.
+Facilite l’application des finitions.","11000"
+"37","Royal Satin","royal-satin","c6ed65162b7dfa4ce39f83be7226bbbe701426df.png","Peinture-laque satinée haute qualité aux résines alkydes en phase solvant","Finition tendue.
+Garnissante et opacifiante.
+Haute durabilité.
+Rendement élevé.","15000"
+"38","Royalacryl Bois","royalacryl-bois","21b5e00b87ecb0f01ea2647368488a8d80ebb883.png","Peinture pour boiseries en phase aqueuse à base de liant acrylique souple","Recommandée pour les bois neufs et anciens.
+Microporeuse.
+Permet l’équilibre hygrométrique du bois.
+Excellente durabilité.
+Anti-flash rusting.
+Label Excell Plus.","15000"
+"39","Royalacryl Mat","royalacryl-mat","c179d9a9787d5bb1ced9796956c1370604a500ba.png","Mat non lustrant pour décoration intérieure","Finition parfaite.
+Aspect mat poudré.
+Lessivable.
+Polyvalence d’emploi.
+Grande facilité d’application.","15000"
+"40","Royalacryl Prim","royalacryl-prim","60c333b4d5ca58dc66c6945b2ecb3f14b4bf28ea.png","Impression polyvalente et primaire d’accrochage pour fonds bloqués en phase aqueuse","Excellente adhérence.
+Opacité et garnissant élevés.
+Séchage rapide.
+Teintable en tons vifs.
+Additivée anti flash-rust.","13000"
+"41","Royale Laque","royale-laque","f723738063a3a37699d01c6d642c69edb3a47aa3.png","Peinture-laque brillante haute qualité aux résines alkydes en phase solvant","Opacité et garnissant élevés.
+Haut niveau de brillant.
+Bonne tension.
+Excellente résistance mécanique.
+Entretien aisé.","10500"
+"42","Sofrabois","sofrabois","0c01cb01e164d8ac3e6c012c0b0a48c5790cab6e.png","Peinture d’impression et de finition microporeuse pour bois à base de liant alkyde souple","Souple et microporeuse.
+Garnissante et opacifiante.
+Protège le bois des intempéries.
+Recommandée pour les bois neufs.
+Régule l’humidité du bois.","15000"
+"43","Sofralac","sofralac","47d4b8d9d46358489f6c6ef94c300376d0c38ea3.png","Peinture-laque antirouille semi-brillante aux résines alkydes en phase solvant","Existe en NOIR MAT.
+Pouvoirs garnissant et opacifiant élevés.
+Très bonne protection anticorrosion.
+Excellente qualité de finition.
+Monoproduit : primaire, intermédiaire et finition.
+Rendement élevé.","16000"
+"44","Sofralo Satin","sofralo-satin","512d670206c9260887f16a16ca6f6398d090b30e.png","Peinture satinée garnissante en phase aqueuse pour murs et plafonds","Garnissante.
+Légèrement pochée.
+Séchage rapide, odeur faible.
+Lessivable.
+Collage et finition des toiles de verre.
+Parfaitement adaptée aux ERP et collectivités.","16000"
+"45","Sofraneuf","sofraneuf","64f079164c0192bf7c488bae65accb5f7729074b.png","Revêtement de façades d’aspect mat bi-fonctionnel D2/D3 aux résines acryliques","Excellent garnissant.
+Bonne respirabilité du support.
+Entretien des RPE ou des fonds structurés.
+Entretien des Systèmes Composites d’Isolation Thermique Extérieure.
+Biostatique.","16000"
+"46","Ultimat","ultimat","beb227c11b2c2726d3df47eab495dae13dad6888.png","Peinture acrylique mate pour surfaces intérieures","Très bonne opacité.
+Grande blancheur.
+Garnissante.
+Application aisée, lavable.
+Redoublable dans la journée.
+Additivée anti flash-rust.","11000"
+"47","Ultimium","ultimium","4cb1765d08127e46624734b18fa1939ba6b1abdc.png","Peinture d’aspect mat profond aux résines acryliques et siloxanes en phase aqueuse","Finition irréprochable exempte de reprise.
+Blancheur parfaite et durable.
+Excellente opacité.
+Matité absolue.
+Très bonne aptitude à la retouche.","13500"
+"48","Ultiprim","ultiprim","582fa92f81febe2d5ecb3e758d989a37ad502aee.png","Impression opacifiante et garnissante aux résines acryliques en phase aqueuse","Opacité remarquable.
+Idéale pour les plaques de plâtre.
+Excellente applicabilité.
+Recouvrement rapide.
+Régule l’absorption du support.
+Additivée anti flash-rust.","10500"
+"49","Ultivelours","ultivelours","844e7aa960af06bf582ca0f54410dba206e1e60e.png","Peinture veloutée garnissante aux résines acryliques en phase aqueuse pour surfaces intérieures","Forte opacité.
+Belle blancheur.
+Pouvoir garnissant élevé.
+Excellente applicabilité.
+Lessivable pour un entretien facile.
+Redoublable dans la journée.","13000"
+"50","Versafix E","versafix-e","16901a3fc4e43e97b189bb4d0824292f9cbc1937.png","Impression microporeuse en phase aqueuse pour travaux de façades","Régulatrice d’absorption.
+Opacifiant et pénétrante.
+Favorise l’accrochage des finitions.
+Séchage rapide.
+Insaponifiable.","11000"
+"51","Versafix S","versafix-s","8198d43def662463c8d7776c7568fb3bc87822ed.png","Impression microporeuse, légèrement granitée, en phase solvant pour travaux de façades","Pénétrante et durcissante.
+Idéale sur anciens fonds décapés.
+Facilite la pose des revêtements épais et d’imperméabilité.
+Insaponifiable.
+Biostatique.
+Légèrement granitée.","12000"
+"52","Victory Mat","victory-mat","c8a34a71c0d0caa2c3834a222a4bb71d85185d5b.png","Peinture mate pour décoration soignée aux résines alkydes-acryliques en phase aqueuse","Grain fin semi-tendu.
+Excellente opacité.
+Application sans reprise.
+Grande polyvalence d’emploi.
+Lavable.","13000"
+"53","Victory Velours","victory-velours","a8eaee24caa06a88c73d2cc8ecbde4e0b7db5a2f.png","Peinture veloutée pour décoration soignée aux résines alkydes-acryliques en phase aqueuse","Grain fin semi-tendu.
+Excellente opacité.
+Application sans reprise.
+Grande polyvalence d’emploi.
+Lessivable.","14000"
+"54","Victory Satin","victory-satin","e70c87da8369105dc56a672a061437a6e2ed3de5.png","Peinture satinée pour décoration soignée aux résines alkydes-acryliques en phase aqueuse","Grain fin semi-tendu.
+Excellente opacité.
+Application sans reprise.
+Grande polyvalence d’emploi.
+Lessivable.","15000"
+"55","Victory Prim","victory-prim","deb3b1840755a56da31cc94c2d1ac5b2c5a65c54.png","Impression universelle aux résines alkydes-acryliques en phase aqueuse","Garnissante et opacifiante.
+Grande polyvalence d’emploi.
+Séchage rapide.
+Microporeuse.
+Additivée anti flash-rust.","12000"
+"56","Zapafor Fix S","zapafor-fix-s","59419e0db8aa30a7637ccfb8261075cca6b2d351.png","mpression à base de résines acryliques en phase solvant pour peinture de sol et surfaces horizontales","Impression des systèmes ZAPAFOR.
+Excellente adhérence.
+Régule l’absorption des bétons poreux.
+Pénétrante et durcissante.
+Insaponifiable.","12000"
+"57","Zapafor Evolution","zapafor-evolution","c52b780406c49803fa7c04eb8712ba2299979e3b.png","Peinture monocomposant satinée pour sols et murs aux résines alkydes-uréthanes en phase solvant","Film dur et résistant.
+Très bonne adhérence.
+Anti-poussière.
+Application et entretien faciles.
+Aspect satiné-brillant tendu.","15000"
+"58","Zapafor Hydrotec","zapafor-hydrotec","2a17a25a69e860e49f4f0464d18ebdb79f1bda30.png","Peinture monocomposant satinée pour sols et murs aux résines méthacryliques et acryliques en phase aqueuse","Film dur et résistant.
+Très bonne adhérence.
+Excellent garnissant.
+Application aisée, séchage rapide.
+Ralentit la carbonatation des bétons.
+Label Excell Plus.","23000"
+"product_id","category_id"
+"1","1"
+"1","8"
+"1","12"
+"1","18"
+"2","1"
+"2","8"
+"2","12"
+"2","17"
+"2","18"
+"3","1"
+"3","2"
+"3","8"
+"3","12"
+"3","17"
+"3","18"
+"4","2"
+"4","8"
+"4","12"
+"4","17"
+"4","18"
+"5","1"
+"5","6"
+"5","8"
+"5","12"
+"5","18"
+"6","2"
+"6","6"
+"6","8"
+"6","12"
+"6","18"
+"7","1"
+"7","7"
+"7","8"
+"7","11"
+"7","17"
+"7","19"
+"8","3"
+"8","7"
+"8","8"
+"8","11"
+"8","17"
+"8","19"
+"9","3"
+"9","7"
+"9","8"
+"9","11"
+"9","12"
+"9","18"
+"10","4"
+"10","5"
+"10","8"
+"10","9"
+"10","10"
+"10","12"
+"10","14"
+"10","18"
+"11","1"
+"11","5"
+"11","8"
+"11","9"
+"11","10"
+"11","12"
+"11","14"
+"11","18"
+"12","3"
+"12","5"
+"12","8"
+"12","9"
+"12","10"
+"12","12"
+"12","14"
+"12","18"
+"13","2"
+"13","5"
+"13","8"
+"13","9"
+"13","10"
+"13","12"
+"13","14"
+"13","18"
+"14","7"
+"14","16"
+"14","19"
+"14","20"
+"15","7"
+"15","12"
+"15","16"
+"15","18"
+"15","20"
+"16","7"
+"17","1"
+"17","7"
+"17","12"
+"17","18"
+"17","20"
+"18","1"
+"18","8"
+"18","12"
+"18","18"
+"19","3"
+"19","8"
+"19","12"
+"19","18"
+"20","2"
+"20","8"
+"20","12"
+"20","18"
+"21","22"
+"22","1"
+"22","7"
+"22","8"
+"22","12"
+"22","13"
+"22","18"
+"22","20"
+"23","1"
+"23","7"
+"23","12"
+"23","13"
+"23","18"
+"23","21"
+"24","7"
+"24","8"
+"24","10"
+"24","19"
+"24","24"
+"25","8"
+"25","17"
+"25","19"
+"25","22"
+"25","25"
+"26","3"
+"26","7"
+"26","8"
+"26","9"
+"26","10"
+"26","17"
+"26","19"
+"27","2"
+"27","7"
+"27","8"
+"27","9"
+"27","10"
+"27","17"
+"27","19"
+"28","1"
+"28","8"
+"28","12"
+"28","19"
+"29","7"
+"29","8"
+"29","9"
+"29","18"
+"29","22"
+"30","1"
+"30","8"
+"30","12"
+"30","18"
+"31","2"
+"31","8"
+"31","12"
+"31","18"
+"32","2"
+"32","8"
+"32","12"
+"32","18"
+"33","7"
+"33","16"
+"33","19"
+"33","20"
+"34","1"
+"34","7"
+"34","8"
+"34","12"
+"34","18"
+"34","20"
+"35","1"
+"35","7"
+"35","12"
+"35","13"
+"35","18"
+"35","20"
+"36","7"
+"36","8"
+"36","9"
+"36","17"
+"36","19"
+"36","22"
+"37","3"
+"37","5"
+"37","7"
+"37","8"
+"37","9"
+"37","10"
+"37","17"
+"37","19"
+"38","3"
+"38","7"
+"38","8"
+"38","9"
+"38","12"
+"38","18"
+"39","1"
+"39","8"
+"39","9"
+"39","12"
+"39","18"
+"40","7"
+"40","8"
+"40","9"
+"40","12"
+"40","18"
+"40","22"
+"41","4"
+"41","5"
+"41","7"
+"41","8"
+"41","9"
+"41","10"
+"41","17"
+"41","19"
+"42","3"
+"42","7"
+"42","8"
+"42","9"
+"42","17"
+"42","19"
+"42","22"
+"43","1"
+"43","3"
+"43","5"
+"43","7"
+"43","8"
+"43","10"
+"43","17"
+"43","19"
+"43","24"
+"44","3"
+"44","8"
+"44","12"
+"44","18"
+"45","1"
+"45","7"
+"45","12"
+"45","18"
+"45","20"
+"45","21"
+"46","1"
+"46","8"
+"46","12"
+"46","18"
+"47","1"
+"47","8"
+"47","12"
+"47","13"
+"47","18"
+"48","8"
+"48","9"
+"48","12"
+"48","18"
+"48","22"
+"49","2"
+"49","8"
+"49","12"
+"49","18"
+"50","7"
+"50","18"
+"50","22"
+"51","7"
+"51","19"
+"51","22"
+"52","1"
+"52","8"
+"52","9"
+"52","12"
+"52","17"
+"52","18"
+"53","2"
+"53","8"
+"53","12"
+"53","17"
+"53","18"
+"54","3"
+"54","8"
+"54","12"
+"54","17"
+"54","18"
+"55","7"
+"55","8"
+"55","9"
+"55","12"
+"55","17"
+"55","18"
+"55","22"
+"56","7"
+"56","8"
+"56","12"
+"56","19"
+"56","22"
+"56","26"
+"57","3"
+"57","7"
+"57","8"
+"57","17"
+"57","19"
+"57","25"
+"57","26"
+"58","3"
+"58","7"
+"58","8"
+"58","12"
+"58","18"
+"58","26"
+"id","user_id","token","created_at"
+"1","1","6190e9372bb6c","2021-11-14 10:47:19"
+"id","email","roles","password","firstname","lastname"
+"1","geoffroy.varlez@gmail.com","[]","$2y$13$ud13Nwv5IYkzhrLR7uJa4uLMwNxrKaqWn3bNK8SSDZ3MkFvkM016i","Geoffroy","Varlez"

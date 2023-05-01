@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Art et Décor | Erreur sur votre commande{% endblock %}
+{% block content %}
+    <h2 style="margin-top: 150px;">Erreur sur votre commande</h2>
+    <p>
+        Bonjour {{ order.user.firstname }},<br>
+        Il semblerait que votre paiement ait échoué pour votre commande N° {{ order.reference }}<br>
+        Une confirmation d'erreur vient de vous être envoyé par e-mail à l'adresse suivante : {{ order.user.email }}
+    </p>
+    <a href="{{ path('order') }}" class="btn btn-success">Réessayer le paiement</a>
+{% endblock %}
